@@ -1,0 +1,5 @@
+D:\Programming\C#\SyteLineDev\ExtensionClasses\CSI\Data.SQL.UDDT\bin\Debug\CSI.Data.SQL.UDDT.dll
+D:\Programming\C#\SyteLineDev\ExtensionClasses\CSI\Data.SQL.UDDT\bin\Debug\CSI.Data.SQL.UDDT.pdb
+D:\Programming\C#\SyteLineDev\ExtensionClasses\CSI\Data.SQL.UDDT\obj\Debug\Data.SQL.UDDT.csproj.CoreCompileInputs.cache
+D:\Programming\C#\SyteLineDev\ExtensionClasses\CSI\Data.SQL.UDDT\obj\Debug\CSI.Data.SQL.UDDT.dll
+D:\Programming\C#\SyteLineDev\ExtensionClasses\CSI\Data.SQL.UDDT\obj\Debug\CSI.Data.SQL.UDDT.pdb

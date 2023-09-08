@@ -1,0 +1,88 @@
+//PROJECT NAME: Logistics
+//CLASS NAME: ICoitemValidateItem.cs
+
+using System;
+using System.Data;
+using CSI.Data.CRUD;
+using CSI.Data.SQL.UDDT;
+
+namespace CSI.Logistics.Customer
+{
+	public interface ICoitemValidateItem
+	{
+		(int? ReturnCode, string ShipSite,
+		string ItemItem,
+		string ItemUM,
+		string ItemDesc,
+		string CustItem,
+		decimal? Price,
+		string FeatStr,
+		int? ItemPlanFlag,
+		string ItemFeatTempl,
+		string ItemCommCode,
+		decimal? ItemUnitWeight,
+		string ItemOrigin,
+		DateTime? DueDate,
+		string RefType,
+		string RefNum,
+		int? RefLineSuf,
+		int? RefRelease,
+		string TaxCode1,
+		string TaxCode1Desc,
+		string TaxCode2,
+		string TaxCode2Desc,
+		decimal? DiscPct,
+		string Infobar,
+		int? SupplQtyReq,
+		decimal? SupplQtyConvFactor,
+		int? Kit,
+		int? PrintKitComponents,
+		int? ItemReservable,
+		int? ItemSerialTracked,
+		int? ItemOrderConfigurable,
+		int? AllowOnPickList) CoitemValidateItemSp(int? NewRecord,
+		string CoNum,
+		string CoType,
+		DateTime? OrderDate,
+		string Item,
+		string OldItem,
+		string CustNum,
+		int? CustSeq,
+		decimal? QtyOrderedConv,
+		string ItemPriceCode,
+		string CurrCode,
+		string ShipSite,
+		string ItemItem,
+		string ItemUM,
+		string ItemDesc,
+		string CustItem,
+		decimal? Price,
+		string FeatStr,
+		int? ItemPlanFlag,
+		string ItemFeatTempl,
+		string ItemCommCode,
+		decimal? ItemUnitWeight,
+		string ItemOrigin,
+		DateTime? DueDate,
+		string RefType,
+		string RefNum,
+		int? RefLineSuf,
+		int? RefRelease,
+		string TaxCode1,
+		string TaxCode1Desc,
+		string TaxCode2,
+		string TaxCode2Desc,
+		decimal? DiscPct,
+		string Infobar,
+		int? CoLine,
+		int? SupplQtyReq,
+		decimal? SupplQtyConvFactor,
+		int? Kit,
+		int? PrintKitComponents,
+		int? ItemReservable,
+		int? ItemSerialTracked = 0,
+		int? ItemOrderConfigurable = 0,
+		int? AllowOnPickList = 0);
+	}
+}
+

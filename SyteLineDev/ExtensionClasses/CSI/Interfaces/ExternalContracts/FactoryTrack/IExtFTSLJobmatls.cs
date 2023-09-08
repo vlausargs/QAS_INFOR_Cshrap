@@ -1,0 +1,10 @@
+using System;
+using System.Runtime.InteropServices;
+
+namespace CSI.ExternalContracts.FactoryTrack
+{
+    public interface IExtFTSLJobmatls
+    {
+        int GetJobmatlItemSp( string Item,  string UM,  string Job,  int? Suffix,  int? OperNum,  int? Sequence,  string CurWhse,  int? ExtByScrap, string PoNum, int? PoLine, int? PoRelease, ref string item_UM, ref string item_Description, ref int? ItemExists, ref decimal? UMConvFactor, ref int? JobmatlExists, ref int? JobmatlByProduct, ref decimal? item_MatlCost, ref decimal? item_MatlCostConv, ref decimal? item_LaborCost, ref decimal? item_LaborCostConv, ref decimal? item_FovhdCost, ref decimal? item_FovhdCostConv, ref decimal? item_VovhdCost, ref decimal? item_VovhdCostConv, ref decimal? item_OutCost, ref decimal? item_OutCostConv, ref string item_IssueBy, ref int? item_SerialTracked, ref int? item_LotTracked, ref string OutLoc, ref string OutLot, ref decimal? ReqQty, ref decimal? ReqQtyConv, ref decimal? QtyIssued, ref decimal? QtyIssuedConv, ref decimal? PlanCost, ref decimal? PlanCostConv, ref decimal? OnHandQty, ref decimal? OnHandQtyConv, ref decimal? ACost, ref decimal? AMatlCost, ref decimal? ALbrCost, ref decimal? AFovhdCost, ref decimal? AVovhdCost, ref decimal? AOutCost, ref string CostCode, ref string PoitemNonInvAcct, ref string PoitemNonInvAcctUnit1, ref string PoitemNonInvAcctUnit2, ref string PoitemNonInvAcctUnit3, ref string PoitemNonInvAcctUnit4, ref string PoitemNonInvAcctAccessUnit1, ref string PoitemNonInvAcctAccessUnit2, ref string PoitemNonInvAcctAccessUnit3, ref string PoitemNonInvAcctAccessUnit4,  ref string Infobar,  ref string Prompt,  ref string PromptButtons,  string Site, ref string OutImportDocId, [DefaultParameterValue(0)] int? JmtRETURN, [DefaultParameterValue(0)] ref int? WCOutside,  ref DateTime? JobmatlRecordDate, [DefaultParameterValue(0)] ref int? TrakcedPieces,  ref string ItemDimensionGroup,  ref Guid? JobmatlRowPointer, [DefaultParameterValue(0)] ref int? JobmatlBackFlush, ref string jobmatl_ManufacturerID, ref string manufacturer_ManufacturerName, ref string jobmatl_ManufacturerItem, ref string manufacturerItem_ManufacturerItemDesc);
+    }
+}

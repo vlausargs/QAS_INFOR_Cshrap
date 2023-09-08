@@ -1,0 +1,5 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ReferencePath>C:\Devel\Toolset6.00\</ReferencePath>
+  </PropertyGroup>
+</Project>

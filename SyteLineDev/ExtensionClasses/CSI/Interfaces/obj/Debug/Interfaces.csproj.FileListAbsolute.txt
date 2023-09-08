@@ -1,0 +1,9 @@
+D:\Programming\C#\SyteLineDev\ExtensionClasses\CSI\Interfaces\bin\Debug\CSI.Interfaces.dll
+D:\Programming\C#\SyteLineDev\ExtensionClasses\CSI\Interfaces\bin\Debug\CSI.Interfaces.pdb
+D:\Programming\C#\SyteLineDev\ExtensionClasses\CSI\Interfaces\bin\Debug\CSI.Data.SQL.UDDT.dll
+D:\Programming\C#\SyteLineDev\ExtensionClasses\CSI\Interfaces\bin\Debug\CSI.Data.SQL.UDDT.pdb
+D:\Programming\C#\SyteLineDev\ExtensionClasses\CSI\Interfaces\obj\Debug\Interfaces.csproj.AssemblyReference.cache
+D:\Programming\C#\SyteLineDev\ExtensionClasses\CSI\Interfaces\obj\Debug\Interfaces.csproj.CoreCompileInputs.cache
+D:\Programming\C#\SyteLineDev\ExtensionClasses\CSI\Interfaces\obj\Debug\Interfaces.csproj.CopyComplete
+D:\Programming\C#\SyteLineDev\ExtensionClasses\CSI\Interfaces\obj\Debug\CSI.Interfaces.dll
+D:\Programming\C#\SyteLineDev\ExtensionClasses\CSI\Interfaces\obj\Debug\CSI.Interfaces.pdb

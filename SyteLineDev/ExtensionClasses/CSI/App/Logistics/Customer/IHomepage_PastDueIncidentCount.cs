@@ -1,0 +1,15 @@
+﻿//PROJECT NAME: Logistics
+//CLASS NAME: IHomepage_PastDueIncidentCount.cs
+
+using System;
+using System.Data;
+using CSI.Data.CRUD;
+using CSI.Data.SQL.UDDT;
+
+namespace CSI.Logistics.Customer
+{
+    public interface IHomepage_PastDueIncidentCount
+    {
+        (ICollectionLoadResponse Data, int? ReturnCode) Homepage_PastDueIncidentCountSp(int? DaysBefore = 30);
+    }
+}

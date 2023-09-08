@@ -1,0 +1,53 @@
+//PROJECT NAME: Production
+//CLASS NAME: RSQC_ShowTransactions.cs
+
+using CSI.Data.SQL.UDDT;
+using System;
+using System.Data;
+using CSI.Data.CRUD;
+using CSI.Data.RecordSets;
+using CSI.MG;
+
+namespace CSI.Production.Quality
+{
+	public class RSQC_ShowTransactions : IRSQC_ShowTransactions
+	{
+		readonly IApplicationDB appDB;
+		readonly IBunchedLoadCollection bunchedLoadCollection;
+		readonly IDataTableToCollectionLoadResponse dataTableToCollectionLoadResponse;
+		
+		public RSQC_ShowTransactions(IApplicationDB appDB, IBunchedLoadCollection bunchedLoadCollection, IDataTableToCollectionLoadResponse dataTableToCollectionLoadResponse)
+		{
+			this.appDB = appDB;
+			this.bunchedLoadCollection = bunchedLoadCollection;
+			this.dataTableToCollectionLoadResponse = dataTableToCollectionLoadResponse;
+		}
+		
+		public (ICollectionLoadResponse Data, int? ReturnCode) RSQC_ShowTransactionsSp(
+			int? rcvr_num,
+			string i_num)
+		{
+			QCRcvrNumType _rcvr_num = rcvr_num;
+			QCDocNumType _i_num = i_num;
+			
+			using (IDbCommand cmd = appDB.CreateCommand())
+			{
+				DataTable dtReturn = new DataTable();
+				
+				cmd.CommandType = CommandType.StoredProcedure;
+				cmd.CommandText = "RSQC_ShowTransactionsSp";
+				
+				appDB.AddCommandParameter(cmd, "rcvr_num", _rcvr_num, ParameterDirection.Input);
+				appDB.AddCommandParameter(cmd, "i_num", _i_num, ParameterDirection.Input);
+				
+				IntType returnVal = 0;
+				IDbDataParameter dbParm = appDB.AddCommandParameter(cmd, "ReturnVal", returnVal, ParameterDirection.ReturnValue);
+				dbParm.DbType = DbType.Int32;
+				
+				dtReturn = appDB.ExecuteQuery(cmd);
+				
+				return (dataTableToCollectionLoadResponse.Process(dtReturn), (int)((IDbDataParameter)cmd.Parameters["@ReturnVal"]).Value);
+			}
+		}
+	}
+}

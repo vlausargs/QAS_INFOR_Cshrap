@@ -1,0 +1,90 @@
+//PROJECT NAME: Finance
+//CLASS NAME: ISSSVTXPOSGetLineInfo.cs
+
+using System;
+using System.Data;
+using CSI.Data.CRUD;
+using CSI.Data.SQL.UDDT;
+
+namespace CSI.Finance.TaxInterface
+{
+	public interface ISSSVTXPOSGetLineInfo
+	{
+		(int? ReturnCode,
+			int? oSTJurisCd,
+			int? oSTGeo,
+			string oSTState,
+			string oSTCity,
+			string oSTZip,
+			string oSTCnty,
+			string oSTCountry,
+			string oSTAddr1,
+			string oSTAddr2,
+			string oSTAddr3,
+			string oSTAddr4,
+			int? oSFJurisCd,
+			int? oSFGeo,
+			string oSFState,
+			string oSFCity,
+			string oSFZip,
+			string oSFCnty,
+			string oSFCountry,
+			string oSFAddr1,
+			string oSFAddr2,
+			string oSFAddr3,
+			string oSFAddr4,
+			string oCurrCode,
+			DateTime? oTaxDate,
+			string oTaxCreditFlag,
+			string oUM,
+			string oDescription,
+			decimal? oDiscount,
+			string oCustNum,
+			int? oCustSeq,
+			string oItem,
+			string oProdCode,
+			string oTransRefType,
+			string Infobar,
+			string LocationCode) SSSVTXPOSGetLineInfoSp(
+			string pRefType,
+			Guid? pHdrPtr,
+			string pLineRefType,
+			Guid? pLinePtr,
+			int? oSTJurisCd,
+			int? oSTGeo,
+			string oSTState,
+			string oSTCity,
+			string oSTZip,
+			string oSTCnty,
+			string oSTCountry,
+			string oSTAddr1,
+			string oSTAddr2,
+			string oSTAddr3,
+			string oSTAddr4,
+			int? oSFJurisCd,
+			int? oSFGeo,
+			string oSFState,
+			string oSFCity,
+			string oSFZip,
+			string oSFCnty,
+			string oSFCountry,
+			string oSFAddr1,
+			string oSFAddr2,
+			string oSFAddr3,
+			string oSFAddr4,
+			string oCurrCode,
+			DateTime? oTaxDate,
+			string oTaxCreditFlag,
+			string oUM,
+			string oDescription,
+			decimal? oDiscount,
+			string oCustNum,
+			int? oCustSeq,
+			string oItem,
+			string oProdCode,
+			string oTransRefType,
+			string Infobar,
+			string LocationCode);
+	}
+}
+

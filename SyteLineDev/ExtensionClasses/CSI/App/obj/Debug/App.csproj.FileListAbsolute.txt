@@ -1,0 +1,1 @@
+D:\Programming\C#\SyteLineDev\ExtensionClasses\CSI\App\obj\Debug\App.csproj.CoreCompileInputs.cache

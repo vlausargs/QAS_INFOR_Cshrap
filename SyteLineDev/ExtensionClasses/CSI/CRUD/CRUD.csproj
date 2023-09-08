@@ -1,0 +1,476 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A89D9F5F-B4A0-453E-9A3F-4917A6D87BD8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CSI.CRUD</RootNamespace>
+    <AssemblyName>CSI.CRUD</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\CheckJourlockStatCRUD.cs" />
+    <Compile Include="Admin\CLM_ProductCodeMarginCRUD.cs" />
+    <Compile Include="Admin\FormActionThresholdCheck\FormActionThresholdCRUD.cs" />
+    <Compile Include="Admin\ICheckJourlockStatCRUD.cs" />
+    <Compile Include="Admin\ICLM_ProductCodeMarginCRUD.cs" />
+    <Compile Include="Admin\IRpt_EmpChildPrivacyCRUD.cs" />
+    <Compile Include="Admin\IRpt_PointOfSalesPrivacyCRUD.cs" />
+    <Compile Include="Admin\IRpt_ServiceContactPrivacyCRUD.cs" />
+    <Compile Include="Admin\IRpt_ServiceContractPrivacyCRUD.cs" />
+    <Compile Include="Admin\ObjCustomAssemblyCRUD.cs" />
+    <Compile Include="Admin\ObjCustomAssemblySourceCRUD.cs" />
+    <Compile Include="Admin\Rpt_EmpChildPrivacyCRUD.cs" />
+    <Compile Include="Admin\Rpt_PointOfSalesPrivacyCRUD.cs" />
+    <Compile Include="Admin\Rpt_ServiceContactPrivacyCRUD.cs" />
+    <Compile Include="Admin\Rpt_ServiceContractPrivacyCRUD.cs" />
+    <Compile Include="Admin\RuntimeInterceptsCRUD.cs" />
+    <Compile Include="Admin\SiteOnBoarding\FileServerLogicalFolderCRUD.cs" />
+    <Compile Include="Admin\SiteOnBoarding\ExportHeaderInfoCRUD.cs" />
+    <Compile Include="Admin\SiteOnBoarding\IExportHeaderInfoCRUD.cs" />
+    <Compile Include="Admin\SiteOnBoarding\IImportDataCRUD.cs" />
+    <Compile Include="Admin\SiteOnBoarding\IImportHeaderInfoCRUD.cs" />
+    <Compile Include="Admin\SiteOnBoarding\ILogicalFolderCRUD.cs" />
+    <Compile Include="Admin\SiteOnBoarding\ImportDataCRUD.cs" />
+    <Compile Include="Admin\SiteOnBoarding\ImportHeaderInfoCRUD.cs" />
+    <Compile Include="Admin\SiteOnBoarding\ITmpSiteMgmtDataCRUD.cs" />
+    <Compile Include="Admin\SiteOnBoarding\ITmpSiteMgmtTableDataCRUD.cs" />
+    <Compile Include="Admin\SiteOnBoarding\ITmpSiteMgmtTaskCRUD.cs" />
+    <Compile Include="Admin\SiteOnBoarding\LogicalFolderCRUD.cs" />
+    <Compile Include="Admin\SiteOnBoarding\DocumentObjectReferenceCRUD.cs" />
+    <Compile Include="Admin\SiteOnBoarding\ObjectNoteCRUD.cs" />
+    <Compile Include="Admin\SiteOnBoarding\TableColumnsCRUD.cs" />
+    <Compile Include="Admin\SiteOnBoarding\TableNameCRUD.cs" />
+    <Compile Include="Admin\SiteOnBoarding\TaskDataCollectorCRUD.cs" />
+    <Compile Include="Admin\SiteOnBoarding\TaskDistributionBookmarkRowDataCRUD.cs" />
+    <Compile Include="Admin\SiteOnBoarding\TmpSiteMgmtDataCRUD.cs" />
+    <Compile Include="Admin\SiteOnBoarding\TmpSiteMgmtTableDataCRUD.cs" />
+    <Compile Include="Admin\SiteOnBoarding\IImportSiteTaskNavigatorCRUD.cs" />
+    <Compile Include="Admin\SiteOnBoarding\ImportSiteTaskNavigatorCRUD.cs" />
+    <Compile Include="Admin\SiteOnBoarding\TmpSiteMgmtTaskCRUD.cs" />
+    <Compile Include="Admin\SiteOnBoarding\TmpSiteMgmtTaskLoadColumnsCRUD.cs" />
+    <Compile Include="Admin\SiteOnBoarding\UserDefinedFieldCRUD.cs" />
+    <Compile Include="Admin\SiteOnBoarding\ISchemaLevelCRUD.cs" />
+    <Compile Include="Admin\SiteOnBoarding\SchemaLevelCRUD.cs" />
+    <Compile Include="BusInterface\CLM_BankStmTypeCodeCRUD.cs" />
+    <Compile Include="BusInterface\CLM_ESBCertificationCRUD.cs" />
+    <Compile Include="BusInterface\CLM_ESBInvoiceTaxRepCRUD.cs" />
+    <Compile Include="BusInterface\CLM_ESBItemCategoryCRUD.cs" />
+    <Compile Include="BusInterface\CLM_ESBJobResourceCRUD.cs" />
+    <Compile Include="BusInterface\CLM_ESBNotesCRUD.cs" />
+    <Compile Include="BusInterface\CLM_ESBItemLangCRUD.cs" />
+    <Compile Include="BusInterface\CLM_ESBShipUnitCRUD.cs" />
+    <Compile Include="BusInterface\CLM_ESBShipUnitItemCRUD.cs" />
+    <Compile Include="BusInterface\CLM_ESBSkillCRUD.cs" />
+    <Compile Include="BusInterface\CLM_ESBTrainingCRUD.cs" />
+    <Compile Include="BusInterface\CLM_ESBUMConvCRUD.cs" />
+    <Compile Include="BusInterface\CLM_ESBUMAlternateCRUD.cs" />
+    <Compile Include="BusInterface\CLM_ESBWorkExperianceCRUD.cs" />
+    <Compile Include="BusInterface\ESBExtWhse\ESBInventoryHoldLoadViewsItemLocationMove\ESBInventoryHoldLoadViewsItemLocationMoveCRUD.cs" />
+    <Compile Include="BusInterface\ESBExtWhse\ESBInventoryHoldLoadViewsItemLocationMove\ItemLotCRUD.cs" />
+    <Compile Include="BusInterface\ESBExtWhse\ESBInventoryHoldLoadViewsItemLocationMove\ItemLotLocCRUD.cs" />
+    <Compile Include="BusInterface\ESBExtWhse\ESBInventoryHoldLoadViewsItemLocationMove\LotAndSNTrackedFlagCRUD.cs" />
+    <Compile Include="BusInterface\ESBExtWhse\ESBReceiveShipLineViewsReceiveLocation\PurchaseOrderLocationCRUD.cs" />
+    <Compile Include="BusInterface\ESBExtWhse\ESBReceiveShipLineViewsReceiveLocation\SalesOrderLocationCRUD.cs" />
+    <Compile Include="BusInterface\ESBExtWhse\ESBReceiveShipLineViewsReceiveLocation\TransferOrderLocationCRUD.cs" />
+    <Compile Include="BusInterface\ESBExtWhse\ExternalHoldCodeCRUD.cs" />
+    <Compile Include="BusInterface\ESBExtWhse\ItemLocationCRUD.cs" />
+    <Compile Include="BusInterface\ESBExtWhse\ItemWarehouseCRUD.cs" />
+    <Compile Include="BusInterface\ESBExtWhse\WarehouseDefaultNonNettableLocationCRUD.cs" />
+    <Compile Include="BusInterface\ICLM_BankStmTypeCodeCRUD.cs" />
+    <Compile Include="BusInterface\ICLM_ESBCertificationCRUD.cs" />
+    <Compile Include="BusInterface\ICLM_ESBInvoiceTaxRepCRUD.cs" />
+    <Compile Include="BusInterface\ICLM_ESBItemCategoryCRUD.cs" />
+    <Compile Include="BusInterface\CLM_ESBItemCustCRUD.cs" />
+    <Compile Include="BusInterface\ICLM_ESBItemCustCRUD.cs" />
+    <Compile Include="BusInterface\ICLM_ESBJobResourceCRUD.cs" />
+    <Compile Include="BusInterface\ICLM_ESBNotesCRUD.cs" />
+    <Compile Include="BusInterface\ICLM_ESBItemLangCRUD.cs" />
+    <Compile Include="BusInterface\ICLM_ESBShipUnitCRUD.cs" />
+    <Compile Include="BusInterface\ICLM_ESBShipUnitItemCRUD.cs" />
+    <Compile Include="BusInterface\ICLM_ESBSkillCRUD.cs" />
+    <Compile Include="BusInterface\ICLM_ESBTrainingCRUD.cs" />
+    <Compile Include="BusInterface\CLM_ESBEducationCRUD.cs" />
+    <Compile Include="BusInterface\ICLM_ESBEducationCRUD.cs" />
+    <Compile Include="BusInterface\ICLM_ESBUMConvCRUD.cs" />
+    <Compile Include="BusInterface\ICLM_ESBUMAlternateCRUD.cs" />
+    <Compile Include="BusInterface\ICLM_ESBWorkExperianceCRUD.cs" />
+    <Compile Include="Logistics\Customer\IUpdateShipmentDetailsWithTMInfoCRUD.cs" />
+    <Compile Include="Logistics\Customer\IUpdateShipUnitDetailsWithTMInfoCRUD.cs" />
+    <Compile Include="Logistics\Customer\UpdateShipmentDetailsWithTMInfoCRUD.cs" />
+    <Compile Include="Logistics\Customer\UpdateShipUnitDetailsWithTMInfoCRUD.cs" />
+    <Compile Include="Codes\BuyerValidCRUD.cs" />
+    <Compile Include="Codes\CLM_GetInvProceduralMarkingsCRUD.cs" />
+    <Compile Include="Codes\CLM_LoadDimAttributeOverrideCRUD.cs" />
+    <Compile Include="Codes\CustSpecificUnitPriceExistsCRUD.cs" />
+    <Compile Include="Codes\Home_MetricProdcodeValueCRUD.cs" />
+    <Compile Include="Codes\IBuyerValidCRUD.cs" />
+    <Compile Include="Codes\ICLM_GetInvProceduralMarkingsCRUD.cs" />
+    <Compile Include="Codes\ICLM_LoadDimAttributeOverrideCRUD.cs" />
+    <Compile Include="Codes\ICustSpecificUnitPriceExistsCRUD.cs" />
+    <Compile Include="Codes\IHome_MetricProdcodeValueCRUD.cs" />
+    <Compile Include="Codes\ISaveVchProceduralMarkingsCRUD.cs" />
+    <Compile Include="Codes\SaveVchProceduralMarkingsCRUD.cs" />
+    <Compile Include="Employee\CLM_GetEmpManagerInfoCRUD.cs" />
+    <Compile Include="Employee\CLM_PayCheckEarningsCRUD.cs" />
+    <Compile Include="Employee\CLM_PayrollCheckDateChartCRUD.cs" />
+    <Compile Include="Employee\CLM_PayrollCheckDateListingCRUD.cs" />
+    <Compile Include="Employee\ExtPrIfErrorSaveCRUD.cs" />
+    <Compile Include="Employee\ICLM_PayCheckEarningsCRUD.cs" />
+    <Compile Include="Employee\ICLM_GetEmpManagerInfoCRUD.cs" />
+    <Compile Include="Employee\CLM_ProcessMgrUserCRUD.cs" />
+    <Compile Include="Employee\ICLM_PayrollCheckDateChartCRUD.cs" />
+    <Compile Include="Employee\ICLM_PayrollCheckDateListingCRUD.cs" />
+    <Compile Include="Employee\ICLM_ProcessMgrUserCRUD.cs" />
+    <Compile Include="Employee\IExtPrIfErrorSaveCRUD.cs" />
+    <Compile Include="Employee\IPredisplayApplicantsCRUD.cs" />
+    <Compile Include="Employee\ISSalICRUD.cs" />
+    <Compile Include="Employee\PredisplayApplicantsCRUD.cs" />
+    <Compile Include="Employee\SSalICRUD.cs" />
+    <Compile Include="PLLOC\IXMLFileToServerManagerCRUD.cs" />
+    <Compile Include="PLLOC\XMLFileToServerManagerCRUD.cs" />
+    <Compile Include="Finance\AP\AptrxVerifyInvNumCRUD.cs" />
+    <Compile Include="Finance\AP\IAptrxVerifyInvNumCRUD.cs" />
+    <Compile Include="Finance\ChartAcctDeleteCRUD.cs" />
+    <Compile Include="Finance\Chinese\CHSGetDigitsOfMainAcctCRUD.cs" />
+    <Compile Include="Finance\Chinese\CHSInputJournalDelCRUD.cs" />
+    <Compile Include="Finance\Chinese\CHSCLM_ListVouchersCRUD.cs" />
+    <Compile Include="Finance\Chinese\CHSCLM_VoucherTypeCodeListCRUD.cs" />
+    <Compile Include="Finance\Chinese\ICHSCLM_ListVouchersCRUD.cs" />
+    <Compile Include="Finance\Chinese\ICHSCLM_VoucherTypeCodeListCRUD.cs" />
+    <Compile Include="Finance\Chinese\ICHSGetDigitsOfMainAcctCRUD.cs" />
+    <Compile Include="Finance\Chinese\ICHSInputJournalDelCRUD.cs" />
+    <Compile Include="Finance\CLM_DeprMethodCRUD.cs" />
+    <Compile Include="Finance\CLM_ExecutiveShipmentRevenueCRUD.cs" />
+    <Compile Include="Finance\CLM_FixedAssetDetailTranCRUD.cs" />
+    <Compile Include="Finance\CLM_SitesWithSameBaseCurrCRUD.cs" />
+    <Compile Include="Finance\DeleteDimensionCRUD.cs" />
+    <Compile Include="Finance\Home_MetricPaymentComparisonCRUD.cs" />
+    <Compile Include="Finance\IChartAcctDeleteCRUD.cs" />
+    <Compile Include="Finance\ICLM_DeprMethodCRUD.cs" />
+    <Compile Include="Finance\ICLM_ExecutiveShipmentRevenueCRUD.cs" />
+    <Compile Include="Finance\ICLM_FixedAssetDetailTranCRUD.cs" />
+    <Compile Include="Finance\ICLM_SitesWithSameBaseCurrCRUD.cs" />
+    <Compile Include="Finance\IDeleteDimensionCRUD.cs" />
+    <Compile Include="Finance\IHome_MetricPaymentComparisonCRUD.cs" />
+    <Compile Include="Finance\IMTDBusinessHandlerCRUD.cs" />
+    <Compile Include="Finance\IReplaceUnitCodesCRUD.cs" />
+    <Compile Include="Finance\IUpdateCurrentPeriodDepreciationToZeroCRUD.cs" />
+    <Compile Include="Finance\MTDBusinessHandlerCRUD.cs" />
+    <Compile Include="Finance\ReplaceUnitCodesCRUD.cs" />
+    <Compile Include="Finance\TaxInterface\ISSSVTXCalcCoTaxCRUD.cs" />
+    <Compile Include="Finance\TaxInterface\SSSVTXCalcCoTaxCRUD.cs" />
+    <Compile Include="Finance\UpdateCurrentPeriodDepreciationToZeroCRUD.cs" />
+    <Compile Include="Logistics\Customer\CalcFreightAmountsCRUD.cs" />
+    <Compile Include="Logistics\Customer\CheckAndGetInvLengthCRUD.cs" />
+    <Compile Include="Logistics\Customer\CheckAssignedLocationsCRUD.cs" />
+    <Compile Include="Logistics\Customer\CLM_CustomerTop5SalesCRUD.cs" />
+    <Compile Include="Logistics\Customer\CLM_DunningCustAgingBasisCRUD.cs" />
+    <Compile Include="Logistics\Customer\CLM_GetAllCosCRUD.cs" />
+    <Compile Include="Logistics\Customer\CLM_GetCashSummaryCRUD.cs" />
+    <Compile Include="Logistics\Customer\CLM_GetCoNumCRUD.cs" />
+    <Compile Include="Logistics\Customer\CLM_GetInvoiceNoCRUD.cs" />
+    <Compile Include="Logistics\Customer\CLM_LastStagePipelineCRUD.cs" />
+    <Compile Include="Logistics\Customer\CLM_ListLeadsmobiCRUD.cs" />
+    <Compile Include="Logistics\Customer\CLM_PopulateDoLineCRUD.cs" />
+    <Compile Include="Logistics\Customer\CLM_ShipmentASNCRUD.cs" />
+    <Compile Include="Logistics\Customer\CLM_SlsmanReportsCRUD.cs" />
+    <Compile Include="Logistics\Customer\CoItemPriceBreakMarkupCRUD.cs" />
+    <Compile Include="Logistics\Customer\CustGlobalCRUD.cs" />
+    <Compile Include="Logistics\Customer\CustomerOrderCountCRUD.cs" />
+    <Compile Include="Logistics\Customer\CustomerQuoteExistsWarningCRUD.cs" />
+    <Compile Include="Logistics\Customer\GenerateVATFileCRUD.cs" />
+    <Compile Include="Logistics\Customer\GetCustNumFromArtranAll\GetCustNumFromArtranAllCRUD.cs" />
+    <Compile Include="Logistics\Customer\GetFreightRateShopRequestCRUD.cs" />
+    <Compile Include="Logistics\Customer\Homepage_CustomerProductCodeBacklogCRUD.cs" />
+    <Compile Include="Logistics\Customer\Homepage_ToBeShippedValueCRUD.cs" />
+    <Compile Include="Logistics\Customer\Home_CustomerAnalysisCRUD.cs" />
+    <Compile Include="Logistics\Customer\Home_GetProductionPlannerParmsCRUD.cs" />
+    <Compile Include="Logistics\Customer\Home_MetricDPOCRUD.cs" />
+    <Compile Include="Logistics\Customer\Home_MetricJobWIPCRUD.cs" />
+    <Compile Include="Logistics\Customer\Home_MetricOnTimeJobCRUD.cs" />
+    <Compile Include="Logistics\Customer\Home_MetricOnTimePaymentCRUD.cs" />
+    <Compile Include="Logistics\Customer\Home_MetricOnTimeShipmentCRUD.cs" />
+    <Compile Include="Logistics\Customer\Home_MetricShippingCRUD.cs" />
+    <Compile Include="Logistics\Customer\Home_MetricVendorCommittedCRUD.cs" />
+    <Compile Include="Logistics\Customer\ICheckAndGetInvLengthCRUD.cs" />
+    <Compile Include="Logistics\Customer\ICheckAssignedLocationsCRUD.cs" />
+    <Compile Include="Logistics\Customer\ICLM_CustomerTop5SalesCRUD.cs" />
+    <Compile Include="Logistics\Customer\ICLM_DunningCustAgingBasisCRUD.cs" />
+    <Compile Include="Logistics\Customer\ICLM_GetAllCosCRUD.cs" />
+    <Compile Include="Logistics\Customer\ICLM_GetCashSummaryCRUD.cs" />
+    <Compile Include="Logistics\Customer\ICLM_GetCoNumCRUD.cs" />
+    <Compile Include="Logistics\Customer\ICLM_GetInvoiceNoCRUD.cs" />
+    <Compile Include="Logistics\Customer\ICLM_LastStagePipelineCRUD.cs" />
+    <Compile Include="Logistics\Customer\ICLM_ListLeadsmobiCRUD.cs" />
+    <Compile Include="Logistics\Customer\ICLM_PopulateDoLineCRUD.cs" />
+    <Compile Include="Logistics\Customer\ICLM_ShipmentASNCRUD.cs" />
+    <Compile Include="Logistics\Customer\ICLM_SlsmanReportsCRUD.cs" />
+    <Compile Include="Logistics\Customer\ICoItemPriceBreakMarkupCRUD.cs" />
+    <Compile Include="Logistics\Customer\ICustGlobalCRUD.cs" />
+    <Compile Include="Logistics\Customer\ICustomerQuoteExistsWarningCRUD.cs" />
+    <Compile Include="Logistics\Customer\IGenerateVATFileCRUD.cs" />
+    <Compile Include="Logistics\Customer\IHomepage_CustomerProductCodeBacklogCRUD.cs" />
+    <Compile Include="Logistics\Customer\IHomepage_ToBeShippedValueCRUD.cs" />
+    <Compile Include="Logistics\Customer\IHome_CustomerAnalysisCRUD.cs" />
+    <Compile Include="Logistics\Customer\IHome_GetProductionPlannerParmsCRUD.cs" />
+    <Compile Include="Logistics\Customer\IHome_MetricDPOCRUD.cs" />
+    <Compile Include="Logistics\Customer\IHome_MetricJobWIPCRUD.cs" />
+    <Compile Include="Logistics\Customer\IHome_MetricOnTimeJobCRUD.cs" />
+    <Compile Include="Logistics\Customer\IHome_MetricOnTimePaymentCRUD.cs" />
+    <Compile Include="Logistics\Customer\IHome_MetricOnTimeShipmentCRUD.cs" />
+    <Compile Include="Logistics\Customer\IHome_MetricShippingCRUD.cs" />
+    <Compile Include="Logistics\Customer\IHome_MetricVendorCommittedCRUD.cs" />
+    <Compile Include="Logistics\Customer\IProcessFreightRateShopRequestCRUD.cs" />
+    <Compile Include="Logistics\Customer\ITableSharedSitesCRUD.cs" />
+    <Compile Include="Logistics\Customer\ProcessFreightRateShopRequestCRUD.cs" />
+    <Compile Include="Logistics\Customer\ShipmentPackageFreightClassCRUD.cs" />
+    <Compile Include="Logistics\Customer\TableSharedSitesCRUD.cs" />
+    <Compile Include="Logistics\FieldService\CallCenter\IIncidentPreDeleteCRUD.cs" />
+    <Compile Include="Logistics\FieldService\CallCenter\IncidentPreDeleteCRUD.cs" />
+    <Compile Include="Logistics\FieldService\ISSSFSAcmInitCRUD.cs" />
+    <Compile Include="Logistics\FieldService\ISSSFSUnitWarrDelCRUD.cs" />
+    <Compile Include="Logistics\FieldService\ISSSTraceStartWrapCRUD.cs" />
+    <Compile Include="Logistics\FieldService\Requests\ISSSFSExpenseReconSaveCRUD.cs" />
+    <Compile Include="Logistics\FieldService\Requests\ISSSFSGetCOCustInfoCRUD.cs" />
+    <Compile Include="Logistics\FieldService\Requests\SSSFSExpenseReconSaveCRUD.cs" />
+    <Compile Include="Logistics\FieldService\Requests\SSSFSGetCOCustInfoCRUD.cs" />
+    <Compile Include="Logistics\FieldService\SSSFSAcmInitCRUD.cs" />
+    <Compile Include="Logistics\FieldService\SSSFSUnitWarrDelCRUD.cs" />
+    <Compile Include="Logistics\FieldService\SSSTraceStartWrapCRUD.cs" />
+    <Compile Include="Logistics\Vendor\BuyerAlertsCRUD.cs" />
+    <Compile Include="Logistics\Vendor\ChangeVendorContractPriceStatusCRUD.cs" />
+    <Compile Include="Logistics\Vendor\ChgPoLineRelStatCRUD.cs" />
+    <Compile Include="Logistics\Vendor\CLM_POBuilderPLNDataCRUD.cs" />
+    <Compile Include="Logistics\Vendor\CLM_ToSiteForManualVoucherBuilderCRUD.cs" />
+    <Compile Include="Logistics\Vendor\IBuyerAlertsCRUD.cs" />
+    <Compile Include="Logistics\Vendor\IChangeVendorContractPriceStatusCRUD.cs" />
+    <Compile Include="Logistics\Vendor\IChgPoLineRelStatCRUD.cs" />
+    <Compile Include="Logistics\Vendor\ICLM_POBuilderPLNDataCRUD.cs" />
+    <Compile Include="Logistics\Vendor\ICLM_ToSiteForManualVoucherBuilderCRUD.cs" />
+    <Compile Include="Material\AU_GetAvaiableParentContainersCRUD.cs" />
+    <Compile Include="Material\CheckConsgnWhseForItemCRUD.cs" />
+    <Compile Include="Material\CheckItemAllsForSiteCRUD.cs" />
+    <Compile Include="Material\CheckLotManufacturerCRUD.cs" />
+    <Compile Include="Material\CheckMrpWbExistsCRUD.cs" />
+    <Compile Include="Material\CLM_ItemComplianceAssignmentCRUD.cs" />
+    <Compile Include="Material\CLM_PurchasedItemsCRUD.cs" />
+    <Compile Include="Material\CopyCostingAnalysisAlternativeCRUD.cs" />
+    <Compile Include="Material\CreateEcnEsigCRUD.cs" />
+    <Compile Include="Material\IAU_GetAvaiableParentContainersCRUD.cs" />
+    <Compile Include="Material\ICheckConsgnWhseForItemCRUD.cs" />
+    <Compile Include="Material\ICheckItemAllsForSiteCRUD.cs" />
+    <Compile Include="Material\ICheckLotManufacturerCRUD.cs" />
+    <Compile Include="Material\ICheckMrpWbExistsCRUD.cs" />
+    <Compile Include="Material\ICLM_ItemComplianceAssignmentCRUD.cs" />
+    <Compile Include="Material\ICLM_PurchasedItemsCRUD.cs" />
+    <Compile Include="Material\ICopyCostingAnalysisAlternativeCRUD.cs" />
+    <Compile Include="Material\ICreateEcnEsigCRUD.cs" />
+    <Compile Include="Material\IItemwhseGetDetailsCRUD.cs" />
+    <Compile Include="Material\ItemwhseGetDetailsCRUD.cs" />
+    <Compile Include="Material\PlantMfgWhseValidityChecker\PlantMfgWhseValidityCheckerCRUD.cs" />
+    <Compile Include="Material\PlantNoAssociationCheck\PlantNoAssociationCheckCRUD.cs" />
+    <Compile Include="MXLOC\ApprovedXMLCRUD.cs" />
+    <Compile Include="MXLOC\CFDIReceiptCRUD.cs" />
+    <Compile Include="MXLOC\IApprovedXMLCRUD.cs" />
+    <Compile Include="MXLOC\ICFDIReceiptCRUD.cs" />
+    <Compile Include="PLLOC\CLM_VatProceduralMarkingsCRUD.cs" />
+    <Compile Include="PLLOC\ICLM_VatProceduralMarkingsCRUD.cs" />
+    <Compile Include="PLLOC\IRptVATValuesFromSpCRUD.cs" />
+    <Compile Include="PLLOC\RptVATValuesFromSpCRUD.cs" />
+    <Compile Include="Production\APS\ApsBOMDelCRUD.cs" />
+    <Compile Include="Production\APS\ApsClearPlannerStatusCRUD.cs" />
+    <Compile Include="Production\APS\ApsEFFECTDelCRUD.cs" />
+    <Compile Include="Production\APS\ApsPARTDelCRUD.cs" />
+    <Compile Include="Production\APS\ApsPBOMDelCRUD.cs" />
+    <Compile Include="POS\ISSSPOSSerialClearCRUD.cs" />
+    <Compile Include="POS\SSSPOSSerialClearCRUD.cs" />
+    <Compile Include="Production\APS\ApsUpdateActiveBGTasksCRUD.cs" />
+    <Compile Include="Production\APS\CLM_ApsGetBOMCRUD.cs" />
+    <Compile Include="Production\APS\CLM_ApsGetEFFECTCRUD.cs" />
+    <Compile Include="Production\APS\CLM_ApsGetMATLPlusCRUD.cs" />
+    <Compile Include="Production\APS\CLM_ApsGetMATLRULECRUD.cs" />
+    <Compile Include="Production\APS\CLM_ApsGetPARTCRUD.cs" />
+    <Compile Include="Production\APS\CLM_ApsGetPBOMCRUD.cs" />
+    <Compile Include="Production\APS\CLM_ApsGetRGRPCRUD.cs" />
+    <Compile Include="Production\APS\CLM_ApsGetShortagesCRUD.cs" />
+    <Compile Include="Production\APS\CLM_ApsGetSupplyUsageCRUD.cs" />
+    <Compile Include="Production\APS\CLM_APSItemListCRUD.cs" />
+    <Compile Include="Production\APS\CLM_APSOrderListCRUD.cs" />
+    <Compile Include="Production\APS\CLM_APSMsgNumListCRUD.cs" />
+    <Compile Include="Production\APS\CLM_ApsWhatIfEXRCPTPOCRUD.cs" />
+    <Compile Include="Production\APS\CLM_ApsWhatIfEXRCPTDemandCRUD.cs" />
+    <Compile Include="Production\APS\CLM_ApsWhatIfEXRCPTItemCRUD.cs" />
+    <Compile Include="Production\APS\CLM_ResGanttDemandsCRUD.cs" />
+    <Compile Include="Production\APS\ExpectedReceiptsAPSItemChgCRUD.cs" />
+    <Compile Include="Production\APS\IApsBOMDelCRUD.cs" />
+    <Compile Include="Production\APS\IApsClearPlannerStatusCRUD.cs" />
+    <Compile Include="Production\APS\IApsEFFECTDelCRUD.cs" />
+    <Compile Include="Production\APS\IApsPARTDelCRUD.cs" />
+    <Compile Include="Production\APS\IApsPBOMDelCRUD.cs" />
+    <Compile Include="Production\APS\IApsUpdateActiveBGTasksCRUD.cs" />
+    <Compile Include="Production\APS\ICLM_ApsGetBOMCRUD.cs" />
+    <Compile Include="Production\APS\ICLM_ApsGetEFFECTCRUD.cs" />
+    <Compile Include="Production\APS\ICLM_ApsGetMATLPlusCRUD.cs" />
+    <Compile Include="Production\APS\ICLM_ApsGetMATLRULECRUD.cs" />
+    <Compile Include="Production\APS\ICLM_ApsGetPARTCRUD.cs" />
+    <Compile Include="Production\APS\ICLM_ApsGetPBOMCRUD.cs" />
+    <Compile Include="Production\APS\ICLM_ApsGetRGRPCRUD.cs" />
+    <Compile Include="Production\APS\ICLM_ApsGetShortagesCRUD.cs" />
+    <Compile Include="Production\APS\ICLM_ApsGetSupplyUsageCRUD.cs" />
+    <Compile Include="Production\APS\ICLM_APSItemListCRUD.cs" />
+    <Compile Include="Production\APS\ICLM_APSOrderListCRUD.cs" />
+    <Compile Include="Production\APS\ICLM_APSMsgNumListCRUD.cs" />
+    <Compile Include="Production\APS\ICLM_ApsWhatIfEXRCPTPOCRUD.cs" />
+    <Compile Include="Production\APS\ICLM_ApsWhatIfEXRCPTDemandCRUD.cs" />
+    <Compile Include="Production\APS\ICLM_ApsWhatIfEXRCPTItemCRUD.cs" />
+    <Compile Include="Production\APS\ICLM_ResGanttDemandsCRUD.cs" />
+    <Compile Include="Production\APS\IExpectedReceiptsAPSItemChgCRUD.cs" />
+    <Compile Include="Production\CheckDelJobMatlCRUD.cs" />
+    <Compile Include="Production\CLM_JobRouteOEECRUD.cs" />
+    <Compile Include="Production\CurrentMaterialsOperChgCRUD.cs" />
+    <Compile Include="Production\CLM_GetPPBatchedOperationTypeCRUD.cs" />
+    <Compile Include="Production\ICheckDelJobMatlCRUD.cs" />
+    <Compile Include="Production\ICLM_GetPPBatchedOperationTypeCRUD.cs" />
+    <Compile Include="Production\ICLM_JobRouteOEECRUD.cs" />
+    <Compile Include="Production\ICurrentMaterialsOperChgCRUD.cs" />
+    <Compile Include="Production\CurrentMaterialsDeleteCRUD.cs" />
+    <Compile Include="Production\ICurrentMaterialsDeleteCRUD.cs" />
+    <Compile Include="Production\CurrentMaterialsJobItemDataCRUD.cs" />
+    <Compile Include="Production\ICurrentMaterialsJobItemDataCRUD.cs" />
+    <Compile Include="Production\IJustInTimeTransactionCRUD.cs" />
+    <Compile Include="Production\JustInTimeTransactionCRUD.cs" />
+    <Compile Include="Production\ProcessManufacturing\IPmfFmGetRevisionCRUD.cs" />
+    <Compile Include="Production\ProcessManufacturing\IPmfPnMatIssuedCRUD.cs" />
+    <Compile Include="Production\ProcessManufacturing\IPmfPnReOpenCRUD.cs" />
+    <Compile Include="Production\ProcessManufacturing\IPmfRptSelectSessFmCRUD.cs" />
+    <Compile Include="Production\ProcessManufacturing\IPmfRptSelectSessPnsCRUD.cs" />
+    <Compile Include="Production\ProcessManufacturing\PmfFmGetRevisionCRUD.cs" />
+    <Compile Include="Production\ProcessManufacturing\PmfPnMatIssuedCRUD.cs" />
+    <Compile Include="Production\ProcessManufacturing\PmfPnReOpenCRUD.cs" />
+    <Compile Include="Production\ProcessManufacturing\PmfRptSelectSessFmCRUD.cs" />
+    <Compile Include="Production\ProcessManufacturing\PmfRptSelectSessPnsCRUD.cs" />
+    <Compile Include="Production\Projects\CLM_InvMsNomCRUD.cs" />
+    <Compile Include="Production\Projects\CLM_ProjectMetricTopPlanCostCRUD.cs" />
+    <Compile Include="Production\Projects\CLM_ProjectMetricTopRevenueCRUD.cs" />
+    <Compile Include="Production\Projects\Home_GetTodaysKeyProjectValuesCRUD.cs" />
+    <Compile Include="Production\Projects\ICLM_InvMsNomCRUD.cs" />
+    <Compile Include="Production\Projects\ICLM_ProjectMetricTopPlanCostCRUD.cs" />
+    <Compile Include="Production\Projects\ICLM_ProjectMetricTopRevenueCRUD.cs" />
+    <Compile Include="Production\Projects\IHome_GetTodaysKeyProjectValuesCRUD.cs" />
+    <Compile Include="Production\Projects\IProjmatlValidateItemCRUD.cs" />
+    <Compile Include="Production\Projects\ProjmatlValidateItemCRUD.cs" />
+    <Compile Include="Production\Quality\IRSQC_CalcIntervalCRUD.cs" />
+    <Compile Include="Production\Quality\IRSQC_GetHoldLocCRUD.cs" />
+    <Compile Include="Production\Quality\IRSQC_GetIPparmsCRUD.cs" />
+    <Compile Include="Production\Quality\IRSQC_GetItemUMCRUD.cs" />
+    <Compile Include="Production\Quality\IRSQC_GetRmaparmsLocCRUD.cs" />
+    <Compile Include="Production\Quality\IRSQC_GetUser3CRUD.cs" />
+    <Compile Include="Production\Quality\IRSQC_GetUserCRUD.cs" />
+    <Compile Include="Production\Quality\IRSQC_GetXrefItemDataCRUD.cs" />
+    <Compile Include="Production\Quality\IRSQC_ParmcuCRUD.cs" />
+    <Compile Include="Production\Quality\IRSQC_UpdateIpItemsCRUD.cs" />
+    <Compile Include="Production\Quality\RcvrUpdate\QCReceiverCRUD.cs" />
+    <Compile Include="Production\Quality\RcvrUpdate\QCTransactionCRUD.cs" />
+    <Compile Include="Production\Quality\RcvrUpdate\UserLocalCRUD.cs" />
+    <Compile Include="Production\Quality\RSQC_CalcIntervalCRUD.cs" />
+    <Compile Include="Production\Quality\RSQC_GetHoldLocCRUD.cs" />
+    <Compile Include="Production\Quality\RSQC_GetIPparmsCRUD.cs" />
+    <Compile Include="Production\Quality\RSQC_GetItemUMCRUD.cs" />
+    <Compile Include="Production\Quality\RSQC_GetRmaparmsLocCRUD.cs" />
+    <Compile Include="Production\Quality\RSQC_GetUser3CRUD.cs" />
+    <Compile Include="Production\Quality\RSQC_GetUserCRUD.cs" />
+    <Compile Include="Production\Quality\RSQC_GetXrefItemDataCRUD.cs" />
+    <Compile Include="Production\Quality\RSQC_ParmcuCRUD.cs" />
+    <Compile Include="Production\Quality\RSQC_UpdateIpItemsCRUD.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reporting\IRpt_CostToCompleteLogCRUD.cs" />
+    <Compile Include="Reporting\IRpt_ChangeOrderCRUD.cs" />
+    <Compile Include="Reporting\IRpt_EstimateJobCostDetailCRUD.cs" />
+    <Compile Include="Reporting\IRpt_GeneralLedgerCheckInformationCRUD.cs" />
+    <Compile Include="Reporting\IRpt_IndentedCostedBillofMaterialCRUD.cs" />
+    <Compile Include="Reporting\IRpt_InventoryBalanceCRUD.cs" />
+    <Compile Include="Reporting\IRpt_InventoryCostCRUD.cs" />
+    <Compile Include="Reporting\IRpt_JobBOMCRUD.cs" />
+    <Compile Include="Reporting\IRpt_MassJournalPostingCRUD.cs" />
+    <Compile Include="Reporting\IRpt_MXVATARPostCRUD.cs" />
+    <Compile Include="Reporting\IRpt_NotesCRUD.cs" />
+    <Compile Include="Reporting\IRpt_ToBeShippedValueCRUD.cs" />
+    <Compile Include="Reporting\IRpt_VouchersPayableCRUD.cs" />
+    <Compile Include="Reporting\IRpt_VouchersPayableSubCRUD.cs" />
+    <Compile Include="Reporting\ProfileShipmentProFormaInvoiceCRUD.cs" />
+    <Compile Include="Reporting\Rpt_CostToCompleteLogCRUD.cs" />
+    <Compile Include="Reporting\Rpt_ChangeOrderCRUD.cs" />
+    <Compile Include="Reporting\Rpt_EstimateJobCostDetailCRUD.cs" />
+    <Compile Include="Reporting\Rpt_GeneralLedgerCheckInformationCRUD.cs" />
+    <Compile Include="Reporting\Rpt_IndentedCostedBillofMaterialCRUD.cs" />
+    <Compile Include="Reporting\Rpt_InventoryBalanceCRUD.cs" />
+    <Compile Include="Reporting\Rpt_InventoryCostCRUD.cs" />
+    <Compile Include="Reporting\Rpt_JobBOMCRUD.cs" />
+    <Compile Include="Reporting\Rpt_MassJournalPostingCRUD.cs" />
+    <Compile Include="Reporting\Rpt_MXVATARPostCRUD.cs" />
+    <Compile Include="Reporting\Rpt_NotesCRUD.cs" />
+    <Compile Include="Reporting\Rpt_ToBeShippedValueCRUD.cs" />
+    <Compile Include="Reporting\Rpt_VouchersPayableCRUD.cs" />
+    <Compile Include="Reporting\Rpt_VouchersPayableSubCRUD.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Data.SQL.UDDT\Data.SQL.UDDT.csproj">
+      <Project>{804042e0-b956-45f7-bf6e-073a5f137bf8}</Project>
+      <Name>Data.SQL.UDDT</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Data\Data.csproj">
+      <Project>{5f2a9956-ff36-41cc-a199-a3a687cc231b}</Project>
+      <Name>Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Interfaces\Interfaces.csproj">
+      <Project>{eeec8fc6-8971-4d40-b96b-38900e97b312}</Project>
+      <Name>Interfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\CSI.CRUD.dll" />
+    <Content Include="bin\Debug\CSI.CRUD.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="FileServer\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>IF DEFINED CSI_IDOXCA_CONFIG copy "$(TargetDir)$(TargetName)$(TargetExt)" "$(CSI_IDOXCA_CONFIG)"
+IF DEFINED CSI_IDOXCA_CONFIG copy "$(TargetDir)$(TargetName).pdb" "$(CSI_IDOXCA_CONFIG)"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

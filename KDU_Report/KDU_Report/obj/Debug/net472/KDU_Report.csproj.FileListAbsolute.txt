@@ -1,0 +1,17 @@
+D:\Programming\C#\KDU_Report\KDU_Report\bin\Debug\net472\KDU_Report.dll
+D:\Programming\C#\KDU_Report\KDU_Report\bin\Debug\net472\KDU_Report.pdb
+D:\Programming\C#\KDU_Report\KDU_Report\bin\Debug\net472\IDOBase.dll
+D:\Programming\C#\KDU_Report\KDU_Report\bin\Debug\net472\IDOCore.dll
+D:\Programming\C#\KDU_Report\KDU_Report\bin\Debug\net472\IDOProtocol.dll
+D:\Programming\C#\KDU_Report\KDU_Report\bin\Debug\net472\MGShared.dll
+D:\Programming\C#\KDU_Report\KDU_Report\bin\Debug\net472\WSEnums.dll
+D:\Programming\C#\KDU_Report\KDU_Report\bin\Debug\net472\WSFormServerProtocol.dll
+D:\Programming\C#\KDU_Report\KDU_Report\bin\Debug\net472\Newtonsoft.Json.dll
+D:\Programming\C#\KDU_Report\KDU_Report\obj\Debug\net472\KDU_Report.csproj.AssemblyReference.cache
+D:\Programming\C#\KDU_Report\KDU_Report\obj\Debug\net472\KDU_Report.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programming\C#\KDU_Report\KDU_Report\obj\Debug\net472\KDU_Report.AssemblyInfoInputs.cache
+D:\Programming\C#\KDU_Report\KDU_Report\obj\Debug\net472\KDU_Report.AssemblyInfo.cs
+D:\Programming\C#\KDU_Report\KDU_Report\obj\Debug\net472\KDU_Report.csproj.CoreCompileInputs.cache
+D:\Programming\C#\KDU_Report\KDU_Report\obj\Debug\net472\KDU_Report.csproj.CopyComplete
+D:\Programming\C#\KDU_Report\KDU_Report\obj\Debug\net472\KDU_Report.dll
+D:\Programming\C#\KDU_Report\KDU_Report\obj\Debug\net472\KDU_Report.pdb

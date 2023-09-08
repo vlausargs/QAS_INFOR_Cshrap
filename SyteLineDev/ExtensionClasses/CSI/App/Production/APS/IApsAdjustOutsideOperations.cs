@@ -1,0 +1,18 @@
+//PROJECT NAME: Production
+//CLASS NAME: IApsAdjustOutsideOperations.cs
+
+using System;
+using System.Data;
+using CSI.Data.CRUD;
+using CSI.Data.SQL.UDDT;
+
+namespace CSI.Production.APS
+{
+	public interface IApsAdjustOutsideOperations
+	{
+		int? ApsAdjustOutsideOperationsSp(
+			DateTime? StartDate,
+			int? AltNo);
+	}
+}
+

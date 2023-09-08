@@ -1,0 +1,57 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="IDOBase">
+      <HintPath>..\..\WinStudio\IDOBase.dll</HintPath>
+    </Reference>
+    <Reference Include="IDOCore">
+      <HintPath>..\..\WinStudio\IDOCore.dll</HintPath>
+    </Reference>
+    <Reference Include="IDOProtocol">
+      <HintPath>..\..\WinStudio\IDOProtocol.dll</HintPath>
+    </Reference>
+    <Reference Include="IDORequestClient">
+      <HintPath>..\..\WinStudio\IDORequestClient.dll</HintPath>
+    </Reference>
+    <Reference Include="MGCommonCtrl">
+      <HintPath>..\..\WinStudio\MGCommonCtrl.dll</HintPath>
+    </Reference>
+    <Reference Include="MGConfig">
+      <HintPath>..\..\WinStudio\MGConfig.dll</HintPath>
+    </Reference>
+    <Reference Include="MGCoreExt">
+      <HintPath>..\..\WinStudio\MGCoreExt.dll</HintPath>
+    </Reference>
+    <Reference Include="MGFileServer">
+      <HintPath>..\..\WinStudio\MGFileServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MGForms">
+      <HintPath>..\..\WinStudio\MGForms.dll</HintPath>
+    </Reference>
+    <Reference Include="MGScriptMgr">
+      <HintPath>..\..\WinStudio\MGScriptMgr.dll</HintPath>
+    </Reference>
+    <Reference Include="MGShared">
+      <HintPath>..\..\WinStudio\MGShared.dll</HintPath>
+    </Reference>
+    <Reference Include="Mongoose.Interop.IDO">
+      <HintPath>..\..\WinStudio\Mongoose.Interop.IDO.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\WinStudio\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WSEnums">
+      <HintPath>..\..\WinStudio\WSEnums.dll</HintPath>
+    </Reference>
+    <Reference Include="WSFormServerProtocol">
+      <HintPath>..\..\WinStudio\WSFormServerProtocol.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

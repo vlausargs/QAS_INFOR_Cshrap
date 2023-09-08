@@ -1,0 +1,1 @@
+<Assembly: Mongoose.IDO.IDOExtensionClassAssembly("DataCollection")> 

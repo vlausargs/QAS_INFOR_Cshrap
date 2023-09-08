@@ -1,0 +1,263 @@
+//PROJECT NAME: CodesExt
+//CLASS NAME: SLDimAttributes.cs
+
+using CSI.Data.SQL.UDDT;
+using System;
+using System.Data;
+using Mongoose.IDO;
+using Mongoose.IDO.Protocol;
+using CSI.Data.RecordSets;
+using CSI.Codes;
+using CSI.MG;
+using System.Runtime.InteropServices;
+using Microsoft.Extensions.DependencyInjection;
+
+namespace CSI.MG.Codes
+{
+    [IDOExtensionClass("SLDimAttributes")]
+    public class SLDimAttributes : CSIExtensionClassBase
+    {
+        [IDOMethod(MethodFlags.None, "Infobar")]
+        public int LoadValueResSp(string Attribute,
+                                    string Value,
+                                    string Val,
+                                    string Parm_type,
+                                    ref string NewVal,
+                                    ref string InfoBar)
+        {
+            using (var MGAppDB = this.CreateAppDB())
+            {
+                var appDb = new CSIAppDBFactory().CreateAppDB(MGAppDB, this.Context, this.GetMessageProvider());
+
+                var iLoadValueResExt = new LoadValueResFactory().Create(appDb);
+
+                DimensionValueType oNewVal = NewVal;
+                InfobarType oInfoBar = InfoBar;
+
+                int Severity = iLoadValueResExt.LoadValueResSp(Attribute,
+                                                               Value,
+                                                               Val,
+                                                               Parm_type,
+                                                               ref oNewVal,
+                                                               ref oInfoBar);
+
+                NewVal = oNewVal;
+                InfoBar = oInfoBar;
+
+
+                return Severity;
+            }
+        }
+
+        [IDOMethod(MethodFlags.CustomLoad, "Infobar")]
+        public DataTable CLM_LedgerDimSubCollectionSp(string ObjectName,
+                                                              Guid? TableRowPointer,
+                                                              string Dimension,
+                                                              string FilterString)
+        {
+            using (var MGAppDB = this.CreateAppDB())
+            {
+                var appDb = new CSIAppDBFactory().CreateAppDB(MGAppDB, this.Context, this.GetMessageProvider());
+                var bunchedLoadCollection = new CSIAppDBFactory().CreateLoadCollectionDatabase(MGAppDB, (LoadCollectionDataBase)this.Context.Request);
+
+                var iCLM_LedgerDimSubCollectionExt = new CLM_LedgerDimSubCollectionFactory().Create(appDb, bunchedLoadCollection);
+
+                DataTable dt = iCLM_LedgerDimSubCollectionExt.CLM_LedgerDimSubCollectionSp(ObjectName,
+                                                                                           TableRowPointer,
+                                                                                           Dimension,
+                                                                                           FilterString);
+
+                return dt;
+            }
+        }
+
+
+
+
+
+
+		[IDOMethod(MethodFlags.None, "Infobar")]
+		public int CheckListSourceSp([Optional] string Acct,
+		                             [Optional] string Attribute,
+		                             [Optional] string Value,
+		                             string SiteRef)
+		{
+			using(var MGAppDB = this.CreateAppDB())
+			{
+				var appDb = new CSIAppDBFactory().CreateAppDB(MGAppDB, this.Context, this.GetMessageProvider());
+				
+				var iCheckListSourceExt = new CheckListSourceFactory().Create(appDb);
+				
+				var result = iCheckListSourceExt.CheckListSourceSp(Acct,
+				                                                   Attribute,
+				                                                   Value,
+				                                                   SiteRef);
+				
+				
+				return result.Value;
+			}
+		}
+
+		[IDOMethod(MethodFlags.CustomLoad, "Infobar")]
+		public DataTable CLM_DimSubCollectionSp(string ObjectName,
+		                                        Guid? TableRowPointer,
+		                                        string Dimension,
+		                                        string FilterString,
+		                                        [Optional, DefaultParameterValue("C")] string OutputFormat)
+		{
+			using(var MGAppDB = this.CreateAppDB())
+			{
+				var appDb = new CSIAppDBFactory().CreateAppDB(MGAppDB, this.Context, this.GetMessageProvider());
+				var bunchedLoadCollection = new CSIAppDBFactory().CreateLoadCollectionDatabase(MGAppDB, (LoadCollectionDataBase)this.Context.Request);
+				
+				var iCLM_DimSubCollectionExt = new CLM_DimSubCollectionFactory().Create(appDb, bunchedLoadCollection);
+				
+				var result = iCLM_DimSubCollectionExt.CLM_DimSubCollectionSp(ObjectName,
+				                                                             TableRowPointer,
+				                                                             Dimension,
+				                                                             FilterString,
+				                                                             OutputFormat);
+				
+				IRecordCollectionToDataTable recordCollectionToDataTable = new RecordCollectionToDataTable();
+				
+				DataTable dt = recordCollectionToDataTable.ToDataTable(result.Data.Items);
+				return dt;
+			}
+		}
+
+		[IDOMethod(MethodFlags.CustomLoad, "Infobar")]
+		public DataTable CLM_DimensionAttributesSp(string ObectName,
+		string DimName,
+		string ParentDimension)
+		{
+			using(var MGAppDB = this.CreateAppDB())
+			{
+				var appDb = new CSIAppDBFactory().CreateAppDB(MGAppDB, this.Context, this.GetMessageProvider());
+				var bunchedLoadCollection = new CSIAppDBFactory().CreateLoadCollectionDatabase(MGAppDB, (LoadCollectionDataBase)this.Context.Request);
+				
+				var mgInvoker = new MGInvoker(this.Context);
+				
+				var iCLM_DimensionAttributesExt = new CLM_DimensionAttributesFactory().Create(appDb,
+				bunchedLoadCollection,
+				mgInvoker,
+				new CSI.Data.SQL.SQLParameterProvider(),
+				true);
+				
+				var result = iCLM_DimensionAttributesExt.CLM_DimensionAttributesSp(ObectName,
+				DimName,
+				ParentDimension);
+				
+				IRecordCollectionToDataTable recordCollectionToDataTable = new RecordCollectionToDataTable();
+				
+				DataTable dt = recordCollectionToDataTable.ToDataTable(result.Data.Items);
+				return dt;
+			}
+		}
+
+		[IDOMethod(MethodFlags.CustomLoad, "Infobar")]
+		public DataTable CLM_GetListSourceSp([Optional] string Acct,
+		[Optional] string Attribute,
+		string SiteRef)
+		{
+			using(var MGAppDB = this.CreateAppDB())
+			{
+				var appDb = new CSIAppDBFactory().CreateAppDB(MGAppDB, this.Context, this.GetMessageProvider());
+				var bunchedLoadCollection = new CSIAppDBFactory().CreateLoadCollectionDatabase(MGAppDB, (LoadCollectionDataBase)this.Context.Request);
+				
+				var mgInvoker = new MGInvoker(this.Context);
+				
+				var iCLM_GetListSourceExt = new CLM_GetListSourceFactory().Create(appDb,
+				bunchedLoadCollection,
+				mgInvoker,
+				new CSI.Data.SQL.SQLParameterProvider(),
+				true);
+				
+				var result = iCLM_GetListSourceExt.CLM_GetListSourceSp(Acct,
+				Attribute,
+				SiteRef);
+				
+				IRecordCollectionToDataTable recordCollectionToDataTable = new RecordCollectionToDataTable();
+				
+				DataTable dt = recordCollectionToDataTable.ToDataTable(result.Data.Items);
+				return dt;
+			}
+		}
+
+		[IDOMethod(MethodFlags.CustomLoad, "Infobar")]
+		public DataTable CLM_LoadDimAttributeOverrideJESp([Optional] string Acct,
+		string SubscriberObjectName)
+		{
+			using(var MGAppDB = this.CreateAppDB())
+			{
+				var appDb = new CSIAppDBFactory().CreateAppDB(MGAppDB, this.Context, this.GetMessageProvider());
+				var bunchedLoadCollection = new CSIAppDBFactory().CreateLoadCollectionDatabase(MGAppDB, (LoadCollectionDataBase)this.Context.Request);
+				
+				var mgInvoker = new MGInvoker(this.Context);
+				
+				var iCLM_LoadDimAttributeOverrideJEExt = new CLM_LoadDimAttributeOverrideJEFactory().Create(appDb,
+				bunchedLoadCollection,
+				mgInvoker,
+				new CSI.Data.SQL.SQLParameterProvider(),
+				true);
+				
+				var result = iCLM_LoadDimAttributeOverrideJEExt.CLM_LoadDimAttributeOverrideJESp(Acct,
+				SubscriberObjectName);
+				
+				IRecordCollectionToDataTable recordCollectionToDataTable = new RecordCollectionToDataTable();
+				
+				DataTable dt = recordCollectionToDataTable.ToDataTable(result.Data.Items);
+				return dt;
+			}
+		}
+
+
+		[IDOMethod(MethodFlags.CustomLoad, "Infobar")]
+		public DataTable CLM_LoadDimAttributeOverrideSp([Optional] string Acct,
+			string SubscriberObjectName,
+			Guid? SubscriberObjectRowPointer)
+		{
+			var iCLM_LoadDimAttributeOverrideExt = this.GetService<ICLM_LoadDimAttributeOverride>();
+
+			var result = iCLM_LoadDimAttributeOverrideExt.CLM_LoadDimAttributeOverrideSp(Acct,
+				SubscriberObjectName,
+				SubscriberObjectRowPointer);
+
+			if (result.Data is null)
+				return new DataTable();
+			else
+			{
+				IRecordCollectionToDataTable recordCollectionToDataTable = new RecordCollectionToDataTable();
+				return recordCollectionToDataTable.ToDataTable(result.Data.Items);
+			}
+		}
+
+		[IDOMethod(MethodFlags.CustomLoad, "Infobar")]
+		public DataTable List_DimCatTableSp(Guid? TableRowPointer,
+		string objectName,
+		string Dimension)
+		{
+			using(var MGAppDB = this.CreateAppDB())
+			{
+				var appDb = new CSIAppDBFactory().CreateAppDB(MGAppDB, this.Context, this.GetMessageProvider());
+				var bunchedLoadCollection = new CSIAppDBFactory().CreateLoadCollectionDatabase(MGAppDB, (LoadCollectionDataBase)this.Context.Request);
+				
+				var mgInvoker = new MGInvoker(this.Context);
+				
+				var iList_DimCatTableExt = new List_DimCatTableFactory().Create(appDb,
+				bunchedLoadCollection,
+				mgInvoker,
+				new CSI.Data.SQL.SQLParameterProvider(),
+				true);
+				
+				var result = iList_DimCatTableExt.List_DimCatTableSp(TableRowPointer,
+				objectName,
+				Dimension);
+				
+				IRecordCollectionToDataTable recordCollectionToDataTable = new RecordCollectionToDataTable();
+				
+				DataTable dt = recordCollectionToDataTable.ToDataTable(result.Data.Items);
+				return dt;
+			}
+		}
+    }
+}

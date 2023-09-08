@@ -1,0 +1,88 @@
+//PROJECT NAME: Logistics
+//CLASS NAME: IGetItemInfo.cs
+
+using System;
+using System.Data;
+using CSI.Data.CRUD;
+using CSI.Data.SQL.UDDT;
+
+namespace CSI.Logistics.Customer
+{
+	public interface IGetItemInfo
+	{
+		(int? ReturnCode, string Item,
+		string Description,
+		string UM,
+		int? SerialTracked,
+		string Revision,
+		string DrawingNbr,
+		string CostType,
+		string PMTCode,
+		decimal? CurMatCost,
+		decimal? CurMatCostConv,
+		decimal? CurFreightCost,
+		decimal? CurFreightCostConv,
+		decimal? CurDutyCost,
+		decimal? CurDutyCostConv,
+		decimal? CurBrokerageCost,
+		decimal? CurBrokerageCostConv,
+		decimal? CurInsuranceCost,
+		decimal? CurInsuranceCostConv,
+		decimal? CurLocFrtCost,
+		decimal? CurLocFrtCostConv,
+		string CommCode,
+		string Origin,
+		decimal? UnitWeight,
+		string TaxCode1,
+		string TaxCode2,
+		int? ItemExists,
+		int? SupplQtyReq,
+		decimal? SupplQtyConvFactor,
+		string PromptMsg,
+		string Infobar,
+		int? LotTracked,
+		int? PreassignLots,
+		int? PreassignSerials,
+		string LotPrefix,
+		string SerialPrefix,
+		int? IsOpenNonInvForm) GetItemInfoSp(string Item,
+		string Description,
+		string UM,
+		int? SerialTracked,
+		string Revision,
+		string DrawingNbr,
+		string CostType,
+		string PMTCode,
+		decimal? CurMatCost,
+		decimal? CurMatCostConv,
+		decimal? CurFreightCost,
+		decimal? CurFreightCostConv,
+		decimal? CurDutyCost,
+		decimal? CurDutyCostConv,
+		decimal? CurBrokerageCost,
+		decimal? CurBrokerageCostConv,
+		decimal? CurInsuranceCost,
+		decimal? CurInsuranceCostConv,
+		decimal? CurLocFrtCost,
+		decimal? CurLocFrtCostConv,
+		string CommCode,
+		string Origin,
+		decimal? UnitWeight,
+		string TaxCode1,
+		string TaxCode2,
+		int? ItemExists,
+		int? SupplQtyReq,
+		decimal? SupplQtyConvFactor,
+		string PromptMsg,
+		string Infobar,
+		string Site = null,
+		int? LotTracked = null,
+		int? PreassignLots = null,
+		int? PreassignSerials = null,
+		string LotPrefix = null,
+		string SerialPrefix = null,
+		string Whse = null,
+		int? IsOpenNonInvForm = 0);
+	}
+}
+

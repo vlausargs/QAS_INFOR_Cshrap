@@ -1,0 +1,2 @@
+D:\Programming\C#\SyteLineDev\ExtensionClasses\CSI\MG\obj\Debug\MG.csproj.AssemblyReference.cache
+D:\Programming\C#\SyteLineDev\ExtensionClasses\CSI\MG\obj\Debug\MG.csproj.CoreCompileInputs.cache

@@ -1,0 +1,16 @@
+//PROJECT NAME: Admin
+//CLASS NAME: IDCJobLaborStatusSum.cs
+
+using System;
+using System.Data;
+using CSI.Data.CRUD;
+using CSI.Data.SQL.UDDT;
+
+namespace CSI.Admin
+{
+	public interface IDCJobLaborStatusSum
+	{
+		(ICollectionLoadResponse Data, int? ReturnCode) DCJobLaborStatusSumSp();
+	}
+}
+

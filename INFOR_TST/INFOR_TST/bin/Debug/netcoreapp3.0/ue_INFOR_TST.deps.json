@@ -1,0 +1,122 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "ue_INFOR_TST/1.0.0": {
+        "dependencies": {
+          "IDOBase": "7.1.0.0",
+          "IDOCore": "7.1.0.0",
+          "IDOProtocol": "7.1.0.0",
+          "MGShared": "7.1.0.0",
+          "WSEnums": "7.1.0.0",
+          "WSFormServerProtocol": "7.1.0.0"
+        },
+        "runtime": {
+          "ue_INFOR_TST.dll": {}
+        }
+      },
+      "IDOBase/7.1.0.0": {
+        "runtime": {
+          "IDOBase.dll": {
+            "assemblyVersion": "7.1.0.0",
+            "fileVersion": "2020.11.0.4"
+          }
+        }
+      },
+      "IDOCore/7.1.0.0": {
+        "runtime": {
+          "IDOCore.dll": {
+            "assemblyVersion": "7.1.0.0",
+            "fileVersion": "2020.11.0.4"
+          }
+        }
+      },
+      "IDOProtocol/7.1.0.0": {
+        "runtime": {
+          "IDOProtocol.dll": {
+            "assemblyVersion": "7.1.0.0",
+            "fileVersion": "2020.11.0.4"
+          }
+        }
+      },
+      "MGShared/7.1.0.0": {
+        "runtime": {
+          "MGShared.dll": {
+            "assemblyVersion": "7.1.0.0",
+            "fileVersion": "2020.11.0.4"
+          }
+        }
+      },
+      "WSEnums/7.1.0.0": {
+        "runtime": {
+          "WSEnums.dll": {
+            "assemblyVersion": "7.1.0.0",
+            "fileVersion": "2020.11.0.4"
+          }
+        }
+      },
+      "WSFormServerProtocol/7.1.0.0": {
+        "runtime": {
+          "WSFormServerProtocol.dll": {
+            "assemblyVersion": "7.1.0.0",
+            "fileVersion": "2020.11.0.4"
+          }
+        }
+      },
+      "Newtonsoft.Json/12.0.0.0": {
+        "runtime": {
+          "Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.1.22727"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ue_INFOR_TST/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "IDOBase/7.1.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "IDOCore/7.1.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "IDOProtocol/7.1.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MGShared/7.1.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WSEnums/7.1.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WSFormServerProtocol/7.1.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Newtonsoft.Json/12.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

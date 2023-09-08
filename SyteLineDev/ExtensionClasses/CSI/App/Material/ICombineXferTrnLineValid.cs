@@ -1,0 +1,86 @@
+//PROJECT NAME: Material
+//CLASS NAME: ICombineXferTrnLineValid.cs
+
+using System;
+using System.Data;
+using CSI.Data.CRUD;
+using CSI.Data.SQL.UDDT;
+
+namespace CSI.Material
+{
+	public interface ICombineXferTrnLineValid
+	{
+		(int? ReturnCode, string Item,
+		string ItemDescription,
+		string UM,
+		decimal? QtyReqConv,
+		decimal? QtyShippedConv,
+		decimal? ConvFactor,
+		string FromLoc,
+		string FromLot,
+		int? LotTracked,
+		int? RemoteLotTracked,
+		string RemoteSiteLotProcess,
+		int? SerialTracked,
+		int? RemoteSerialTracked,
+		int? UseExistingSerials,
+		string RemoteSerialPrefix,
+		int? RemoteExpandSerial,
+		string ToLoc,
+		decimal? UnitCost,
+		string PromptMsg,
+		string PromptButtons,
+		string Infobar,
+		string ImportDocId,
+		int? TaxFreeMatl,
+		int? TrackPieces,
+		string DimensionGroup,
+		int? UbToTrackPieces,
+		string UbToDimentionGroup,
+		string UbFromLotAttributeGroup,
+		string UbToLotAttributeGroup,
+		string RemoteLotPrefix,
+		int? PreassignLots,
+		int? PreassignSerials,
+		decimal? UbQtyOnHandConv) CombineXferTrnLineValidSp(string TrnNum,
+		int? TrnLine,
+		string FromSite,
+		string FromWhse,
+		string ToSite,
+		string ToWhse,
+		string Item,
+		string ItemDescription,
+		string UM,
+		decimal? QtyReqConv,
+		decimal? QtyShippedConv,
+		decimal? ConvFactor,
+		string FromLoc,
+		string FromLot,
+		int? LotTracked,
+		int? RemoteLotTracked,
+		string RemoteSiteLotProcess,
+		int? SerialTracked,
+		int? RemoteSerialTracked,
+		int? UseExistingSerials,
+		string RemoteSerialPrefix,
+		int? RemoteExpandSerial,
+		string ToLoc,
+		decimal? UnitCost,
+		string PromptMsg,
+		string PromptButtons,
+		string Infobar,
+		string ImportDocId,
+		int? TaxFreeMatl,
+		int? TrackPieces = null,
+		string DimensionGroup = null,
+		int? UbToTrackPieces = null,
+		string UbToDimentionGroup = null,
+		string UbFromLotAttributeGroup = null,
+		string UbToLotAttributeGroup = null,
+		string RemoteLotPrefix = null,
+		int? PreassignLots = null,
+		int? PreassignSerials = null,
+		decimal? UbQtyOnHandConv = null);
+	}
+}
+

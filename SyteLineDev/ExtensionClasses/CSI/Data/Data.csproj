@@ -1,0 +1,502 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5F2A9956-FF36-41CC-A199-A3A687CC231B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CSI.Data</RootNamespace>
+    <AssemblyName>CSI.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <WarningsAsErrors>NU1605</WarningsAsErrors>
+    <NoWarn>1701;1702</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInvoker.cs" />
+    <Compile Include="AssemblyLoader.cs" />
+    <Compile Include="Bookmark.cs" />
+    <Compile Include="BookmarkColumn.cs" />
+    <Compile Include="BookmarkFactory.cs" />
+    <Compile Include="BookmarkSerializer.cs" />
+    <Compile Include="Cache\AppCacheNamespaces.cs" />
+    <Compile Include="Cache\IDOMethodCallBoundedMemoryCache.cs" />
+    <Compile Include="Cache\MGSessionVariableBasedCache.cs" />
+    <Compile Include="Cache\MGSessionVariableBasedCacheSerializer.cs" />
+    <Compile Include="Cache\SQLTablePrimaryKeyCache.cs" />
+    <Compile Include="Cache\SQLTableSchemaCache.cs" />
+    <Compile Include="Contract.cs" />
+    <Compile Include="CreditCard\CreditCardUtil.cs" />
+    <Compile Include="CreditCard\CreditCardUtilFactory.cs" />
+    <Compile Include="CRUD\CollectionDeleteRequest.cs" />
+    <Compile Include="CRUD\CollectionDeleteRequestFactory.cs" />
+    <Compile Include="CRUD\CollectionInsertRequest.cs" />
+    <Compile Include="CRUD\CollectionInsertRequestFactory.cs" />
+    <Compile Include="CRUD\CollectionLoadBuilderFactory.cs" />
+    <Compile Include="CRUD\CollectionLoadBuilderRequest.cs" />
+    <Compile Include="CRUD\CollectionLoadBuilderRequestFactory.cs" />
+    <Compile Include="CRUD\CollectionLoadRequest.cs" />
+    <Compile Include="CRUD\CollectionLoadRequestFactory.cs" />
+    <Compile Include="CRUD\CollectionLoadStatementFactory.cs" />
+    <Compile Include="CRUD\CollectionLoadStatementRequest.cs" />
+    <Compile Include="CRUD\CollectionLoadStatementRequestFactory.cs" />
+    <Compile Include="CRUD\CollectionNonTriggerDeleteFactory.cs" />
+    <Compile Include="CRUD\CollectionNonTriggerDeleteRequest.cs" />
+    <Compile Include="CRUD\CollectionNonTriggerDeleteRequestFactory.cs" />
+    <Compile Include="CRUD\CollectionNonTriggerInsertFactory.cs" />
+    <Compile Include="CRUD\CollectionNonTriggerInsertRequest.cs" />
+    <Compile Include="CRUD\CollectionNonTriggerInsertRequestFactory.cs" />
+    <Compile Include="CRUD\CollectionNonTriggerUpdateFactory.cs" />
+    <Compile Include="CRUD\CollectionNonTriggerUpdateRequest.cs" />
+    <Compile Include="CRUD\CollectionNonTriggerUpdateRequestFactory.cs" />
+    <Compile Include="CRUD\CollectionUpdateRequest.cs" />
+    <Compile Include="CRUD\CollectionUpdateRequestFactory.cs" />
+    <Compile Include="CRUD\LoadRequestVariablesUpdate.cs" />
+    <Compile Include="CRUD\Triggers\CSIExtensionClassState.cs" />
+    <Compile Include="CRUD\Triggers\TriggerManagement.cs" />
+    <Compile Include="CSIAppDB.cs" />
+    <Compile Include="CSIRemoteMethodCall.cs" />
+    <Compile Include="CSIRemoteMethodCallFactory.cs" />
+    <Compile Include="CSIRemoteMethodForReplicationTargets.cs" />
+    <Compile Include="CSIRemoteMethodForReplicationTargetsFactory.cs" />
+    <Compile Include="DbException.cs" />
+    <Compile Include="DropDynamicTable.cs" />
+    <Compile Include="DropDynamicTableFactory.cs" />
+    <Compile Include="Functions\AndSqlWhereWithISNULL.cs" />
+    <Compile Include="Functions\AndSqlWhereWithISNULLFactory.cs" />
+    <Compile Include="Functions\ApsForecastOrderId.cs" />
+    <Compile Include="Functions\ApsForecastOrderIdFactory.cs" />
+    <Compile Include="Functions\ApsGetOrderID2.cs" />
+    <Compile Include="Functions\ApsGetOrderID2Factory.cs" />
+    <Compile Include="Functions\ApsMpsOrderId.cs" />
+    <Compile Include="Functions\ApsMpsOrderIdFactory.cs" />
+    <Compile Include="Functions\ApsOrderId.cs" />
+    <Compile Include="Functions\ApsOrderIdFactory.cs" />
+    <Compile Include="Functions\ApsProjectOrderId.cs" />
+    <Compile Include="Functions\ApsProjectOrderIdFactory.cs" />
+    <Compile Include="Functions\ApsSafetyStockOrderId.cs" />
+    <Compile Include="Functions\ApsSafetyStockOrderIdFactory.cs" />
+    <Compile Include="Functions\ApsTransferOutOrderId.cs" />
+    <Compile Include="Functions\ApsTransferOutOrderIdFactory.cs" />
+    <Compile Include="Functions\ConvertINStr.cs" />
+    <Compile Include="Functions\ConvertINStrFactory.cs" />
+    <Compile Include="Functions\ConvertSecondsToTime.cs" />
+    <Compile Include="Functions\ConvertSecondsToTimeAsStr.cs" />
+    <Compile Include="Functions\ConvertSecondsToTimeAsStrFactory.cs" />
+    <Compile Include="Functions\ConvertSecondsToTimeFactory.cs" />
+    <Compile Include="Functions\DayEndOf.cs" />
+    <Compile Include="Functions\DerSlsmanName.cs" />
+    <Compile Include="Functions\DisplayAddressForReportFooter.cs" />
+    <Compile Include="Functions\DisplayAddressForReportFooterFactory.cs" />
+    <Compile Include="Functions\DisplayOurAddressWithPhoneLang.cs" />
+    <Compile Include="Functions\DisplayOurAddressWithPhoneLangFactory.cs" />
+    <Compile Include="Functions\DisplayVendorAddressWithPhoneLang.cs" />
+    <Compile Include="Functions\DisplayVendorAddressWithPhoneLangFactory.cs" />
+    <Compile Include="Functions\ExistsChecker.cs" />
+    <Compile Include="Functions\ExistsCheckerFactory.cs" />
+    <Compile Include="Functions\FormatAddressForCP.cs" />
+    <Compile Include="Functions\FormatAddressForCPFactory.cs" />
+    <Compile Include="Functions\GetCatalogRowPointer.cs" />
+    <Compile Include="Functions\GetCatalogRowPointerFactory.cs" />
+    <Compile Include="Functions\GetCodeDesc.cs" />
+    <Compile Include="Functions\GetCodeDescFactory.cs" />
+    <Compile Include="Functions\GetCostCode.cs" />
+    <Compile Include="Functions\GetCostCodeFactory.cs" />
+    <Compile Include="Functions\GetFullName.cs" />
+    <Compile Include="Functions\GetFullNameFactory.cs" />
+    <Compile Include="Functions\GetIsolationLevel.cs" />
+    <Compile Include="Functions\GetIsolationLevelFactory.cs" />
+    <Compile Include="Functions\GetParmsSingleLineAddress.cs" />
+    <Compile Include="Functions\GetParmsSingleLineAddressFactory.cs" />
+    <Compile Include="Functions\GetSalesPeriod.cs" />
+    <Compile Include="Functions\GetSalesPeriodFactory.cs" />
+    <Compile Include="Functions\GetSQLDateTime.cs" />
+    <Compile Include="Functions\GetSQLDateTimeFactory.cs" />
+    <Compile Include="Functions\HighAnyInt.cs" />
+    <Compile Include="Functions\HighAnyIntCache.cs" />
+    <Compile Include="Functions\HighAnyIntFactory.cs" />
+    <Compile Include="Functions\HighCharacterCacheFactory.cs" />
+    <Compile Include="Functions\HighCharacterFactory.cs" />
+    <Compile Include="Functions\HighDate.cs" />
+    <Compile Include="Functions\HighDateCache.cs" />
+    <Compile Include="Functions\HighDateCacheFactory.cs" />
+    <Compile Include="Functions\HighDateFactory.cs" />
+    <Compile Include="Functions\HighDecimal.cs" />
+    <Compile Include="Functions\HighDecimalCache.cs" />
+    <Compile Include="Functions\HighDecimalFactory.cs" />
+    <Compile Include="Functions\HighInt.cs" />
+    <Compile Include="Functions\HighIntCache.cs" />
+    <Compile Include="Functions\HighIntCacheFactory.cs" />
+    <Compile Include="Functions\HighIntFactory.cs" />
+    <Compile Include="Functions\HighString.cs" />
+    <Compile Include="Functions\HighStringCache.cs" />
+    <Compile Include="Functions\HighStringCacheFactory.cs" />
+    <Compile Include="Functions\HighStringFactory.cs" />
+    <Compile Include="Functions\IAndSqlWhereWithISNULL.cs" />
+    <Compile Include="Functions\IApsForecastOrderId.cs" />
+    <Compile Include="Functions\IApsGetOrderID2.cs" />
+    <Compile Include="Functions\IApsMpsOrderId.cs" />
+    <Compile Include="Functions\IApsOrderId.cs" />
+    <Compile Include="Functions\IApsProjectOrderId.cs" />
+    <Compile Include="Functions\IApsSafetyStockOrderId.cs" />
+    <Compile Include="Functions\IApsTransferOutOrderId.cs" />
+    <Compile Include="Functions\IConvertINStr.cs" />
+    <Compile Include="Functions\IDerSlsmanName.cs" />
+    <Compile Include="Functions\IDisplayAddressForReportFooter.cs" />
+    <Compile Include="Functions\IDisplayOurAddressWithPhoneLangSp.cs" />
+    <Compile Include="Functions\IDisplayVendorAddressWithPhoneLangSp.cs" />
+    <Compile Include="Functions\IFormatAddressForCP.cs" />
+    <Compile Include="Functions\IGetCatalogRowPointer.cs" />
+    <Compile Include="Functions\IGetCostCode.cs" />
+    <Compile Include="Functions\IGetFullName.cs" />
+    <Compile Include="Functions\IGetParmsSingleLineAddress.cs" />
+    <Compile Include="Functions\IGetSQLDateTime.cs" />
+    <Compile Include="Functions\IHighAnyInt.cs" />
+    <Compile Include="Functions\IHighDecimal.cs" />
+    <Compile Include="Functions\ILeftPad.cs" />
+    <Compile Include="Functions\ILowAnyInt.cs" />
+    <Compile Include="Functions\ILowDecimal.cs" />
+    <Compile Include="Functions\IMaxAmt.cs" />
+    <Compile Include="Functions\IMinAmt.cs" />
+    <Compile Include="Functions\IMinQty.cs" />
+    <Compile Include="Functions\IReqQty.cs" />
+    <Compile Include="Functions\IsAddOnAvailable.cs" />
+    <Compile Include="Functions\IsAddonAvailableCache.cs" />
+    <Compile Include="Functions\IsAddonAvailableCacheFactory.cs" />
+    <Compile Include="Functions\IsAddonAvailableFactory.cs" />
+    <Compile Include="Functions\ISSSFSApsSROOrderID.cs" />
+    <Compile Include="Functions\IStringOfLanguage.cs" />
+    <Compile Include="Functions\ITruncateTable.cs" />
+    <Compile Include="Functions\LeftPad.cs" />
+    <Compile Include="Functions\LeftPadFactory.cs" />
+    <Compile Include="Functions\LowAnyInt.cs" />
+    <Compile Include="Functions\LowAnyIntCache.cs" />
+    <Compile Include="Functions\LowAnyIntFactory.cs" />
+    <Compile Include="Functions\LowCharacterCacheFactory.cs.cs" />
+    <Compile Include="Functions\LowCharacterFactory.cs" />
+    <Compile Include="Functions\LowDateCache.cs" />
+    <Compile Include="Functions\LowDateCacheFactory.cs" />
+    <Compile Include="Functions\LowDateFactory.cs" />
+    <Compile Include="Functions\LowDecimal.cs" />
+    <Compile Include="Functions\LowDecimalCache.cs" />
+    <Compile Include="Functions\LowDecimalFactory.cs" />
+    <Compile Include="Functions\LowInt.cs" />
+    <Compile Include="Functions\LowIntCache.cs" />
+    <Compile Include="Functions\LowIntCacheFactory.cs" />
+    <Compile Include="Functions\LowIntFactory.cs" />
+    <Compile Include="Functions\LowString.cs" />
+    <Compile Include="Functions\LowStringCache.cs" />
+    <Compile Include="Functions\LowStringCacheFactory.cs" />
+    <Compile Include="Functions\LowStringFactory.cs" />
+    <Compile Include="Functions\MaxAmt.cs" />
+    <Compile Include="Functions\MaxAmtFactory.cs" />
+    <Compile Include="Functions\MaxQty.cs" />
+    <Compile Include="Functions\MaxQtyFactory.cs" />
+    <Compile Include="Functions\MinAmt.cs" />
+    <Compile Include="Functions\MinAmtFactory.cs" />
+    <Compile Include="Functions\MinQty.cs" />
+    <Compile Include="Functions\MinQtyFactory.cs" />
+    <Compile Include="Functions\QuotedLiteral.cs" />
+    <Compile Include="Functions\QuotedLiteralFactory.cs" />
+    <Compile Include="Functions\RefFmt.cs" />
+    <Compile Include="Functions\RefFmtFactory.cs" />
+    <Compile Include="Functions\ReqQty.cs" />
+    <Compile Include="Functions\ReqQtyFactory.cs" />
+    <Compile Include="Functions\ScalarFunction.cs" />
+    <Compile Include="Functions\ScalarFunctionFactory.cs" />
+    <Compile Include="Functions\SQLExpressionExecutor.cs" />
+    <Compile Include="Functions\SQLExpressionExecutorFactory.cs" />
+    <Compile Include="Functions\SQLFeatures.cs" />
+    <Compile Include="Functions\SSSFSApsSROOrderID.cs" />
+    <Compile Include="Functions\SSSFSApsSROOrderIDFactory.cs" />
+    <Compile Include="Functions\StringOfLanguage.cs" />
+    <Compile Include="Functions\StringOfLanguageFactory.cs" />
+    <Compile Include="Functions\TruncateTable.cs" />
+    <Compile Include="Functions\TruncateTableFactory.cs" />
+    <Compile Include="Functions\UntagErrorMessage.cs" />
+    <Compile Include="Functions\UntagErrorMessageFactory.cs" />
+    <Compile Include="HrsDay.cs" />
+    <Compile Include="HrsDayFactory.cs" />
+    <Compile Include="ICSIRemoteMethodCall.cs" />
+    <Compile Include="ICSIRemoteMethodForReplicationTargets.cs" />
+    <Compile Include="IHrsDay.cs" />
+    <Compile Include="Metric\CSIMetricRecorder.cs" />
+    <Compile Include="Metric\CSIMetricRecorderFactory.cs" />
+    <Compile Include="Metric\DefaultCSIMetricRecorder.cs" />
+    <Compile Include="Metric\DefaultMetricBuilder.cs" />
+    <Compile Include="Metric\DefaultRunningTimer.cs" />
+    <Compile Include="Metric\ICSIMetricRecorder.cs" />
+    <Compile Include="Metric\IMetricBuilder.cs" />
+    <Compile Include="Metric\ITimerFactory.cs" />
+    <Compile Include="Metric\Logger.cs" />
+    <Compile Include="Metric\LoggerFactory.cs" />
+    <Compile Include="Metric\MetricBuilder.cs" />
+    <Compile Include="Metric\MetricBuilderFactory.cs" />
+    <Compile Include="Metric\MetricConfiguration.cs" />
+    <Compile Include="Metric\SQLLogger.cs" />
+    <Compile Include="Metric\Timer.cs" />
+    <Compile Include="Metric\TimerFactory.cs" />
+    <Compile Include="MsgApp.cs" />
+    <Compile Include="Net\CSIHttpWebRequest.cs" />
+    <Compile Include="Net\CSIHttpWebRequestFactory.cs" />
+    <Compile Include="Net\CSIRequester.cs" />
+    <Compile Include="Net\CSIRequesterFactory.cs" />
+    <Compile Include="Net\CSIWebResponse.cs" />
+    <Compile Include="Net\CSIWebResponseFactory.cs" />
+    <Compile Include="Net\ICSIHttpWebRequest.cs" />
+    <Compile Include="Net\ICSIHttpWebRequestFactory.cs" />
+    <Compile Include="Net\ICSIRequester.cs" />
+    <Compile Include="Net\ICSIRequesterFactory.cs" />
+    <Compile Include="Net\ICSIWebResponse.cs" />
+    <Compile Include="Net\ICSIWebResponseFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RaiseError.cs" />
+    <Compile Include="RaiseErrorFactory.cs" />
+    <Compile Include="RecordSets\DataTableToCollectionLoadResponse.cs" />
+    <Compile Include="RecordSets\LeftOuterJoinViaScan.cs" />
+    <Compile Include="RecordSets\Record.cs" />
+    <Compile Include="RecordSets\RecordCollection.cs" />
+    <Compile Include="RecordSets\RecordCollectionDataTable.cs" />
+    <Compile Include="RecordSets\RecordCollectionToDataTable.cs" />
+    <Compile Include="RecordSets\RecordDataRow.cs" />
+    <Compile Include="RecordSets\RecordSole.cs" />
+    <Compile Include="RuntimeIntercept\AssemblyScanner.cs" />
+    <Compile Include="RuntimeIntercept\ERuntimeIntercept.cs" />
+    <Compile Include="RuntimeIntercept\IDOMethodIntercept.cs" />
+    <Compile Include="RuntimeIntercept\IInterceptConfiguration.cs" />
+    <Compile Include="RuntimeIntercept\InterceptConfiguration.cs" />
+    <Compile Include="RuntimeIntercept\IRuntimeInterceptRecord.cs" />
+    <Compile Include="RuntimeIntercept\RuntimeInterceptRecord.cs" />
+    <Compile Include="RuntimeIntercept\RunTimeInterceptAttribute.cs" />
+    <Compile Include="RuntimeIntercept\TupleBuilder.cs" />
+    <Compile Include="SortOrder.cs" />
+    <Compile Include="SortOrderColumn.cs" />
+    <Compile Include="SortOrderFactory.cs" />
+    <Compile Include="SQLCommandExecutor.cs" />
+    <Compile Include="SQLCommandParameters.cs" />
+    <Compile Include="SQL\AddProcessErrorLog.cs" />
+    <Compile Include="SQL\AllSitesSameDb.cs" />
+    <Compile Include="SQL\AndSqlWhere.cs" />
+    <Compile Include="SQL\AnticipateSessionIdentity.cs" />
+    <Compile Include="SQL\ApplyDateOffSET.cs" />
+    <Compile Include="SQL\BGTaskSubmit.cs" />
+    <Compile Include="SQL\BuildXMLFilterString.cs" />
+    <Compile Include="SQL\CanAny.cs" />
+    <Compile Include="SQL\CloseSession.cs" />
+    <Compile Include="SQL\CloseSessionContext.cs" />
+    <Compile Include="SQL\CopySessionVariables.cs" />
+    <Compile Include="SQL\CopyUetColumns.cs" />
+    <Compile Include="SQL\CreateSpecificNote.cs" />
+    <Compile Include="SQL\Cstr.cs" />
+    <Compile Include="SQL\CU_Notes.cs" />
+    <Compile Include="SQL\DefaultToLocalSite.cs" />
+    <Compile Include="SQL\DefinedValue.cs" />
+    <Compile Include="SQL\DefinedValueBySessionId.cs" />
+    <Compile Include="SQL\DefineProcessVariable.cs" />
+    <Compile Include="SQL\DefineVariable.cs" />
+    <Compile Include="SQL\DefineVariableBySessionId.cs" />
+    <Compile Include="SQL\DoubleQuote.cs" />
+    <Compile Include="SQL\Entry.cs" />
+    <Compile Include="SQL\ExecuteDynamicSQL.cs" />
+    <Compile Include="SQL\ExecuteDynamicSQLFactory.cs" />
+    <Compile Include="SQL\FireEvent.cs" />
+    <Compile Include="SQL\FireGenericNotify.cs" />
+    <Compile Include="SQL\GetLabel.cs" />
+    <Compile Include="SQL\GetLabelCache.cs" />
+    <Compile Include="SQL\GetProcessVariable.cs" />
+    <Compile Include="SQL\GetReplicationCounter.cs" />
+    <Compile Include="SQL\GetSiteContext.cs" />
+    <Compile Include="SQL\GetSiteDate.cs" />
+    <Compile Include="SQL\GetStringValue.cs" />
+    <Compile Include="SQL\GetUserPrivileges.cs" />
+    <Compile Include="SQL\GetVariable.cs" />
+    <Compile Include="SQL\HighCharacter.cs" />
+    <Compile Include="SQL\HighCharacterCache.cs" />
+    <Compile Include="SQL\InitSessionContext.cs" />
+    <Compile Include="SQL\InitSessionContextWithUser.cs" />
+    <Compile Include="SQL\InsertEventInputParameter.cs" />
+    <Compile Include="SQL\InterpretText.cs" />
+    <Compile Include="SQL\IsInteger.cs" />
+    <Compile Include="SQL\LowCharacter.cs" />
+    <Compile Include="SQL\LowCharacterCache.cs" />
+    <Compile Include="SQL\LowDate.cs" />
+    <Compile Include="SQL\MGSetSite.cs" />
+    <Compile Include="SQL\MidnightOf.cs" />
+    <Compile Include="SQL\MinDate.cs" />
+    <Compile Include="SQL\MsgAppFunction.cs" />
+    <Compile Include="SQL\MsgAsk.cs" />
+    <Compile Include="SQL\MsgPre.cs" />
+    <Compile Include="SQL\NextKey.cs" />
+    <Compile Include="SQL\NotifyPublicationSubscribers.cs" />
+    <Compile Include="SQL\PrefixOnly.cs" />
+    <Compile Include="SQL\RemoteInfobarSave.cs" />
+    <Compile Include="SQL\RemoteMethodForReplicationTargets.cs" />
+    <Compile Include="SQL\ResetSessionID.cs" />
+    <Compile Include="SQL\RestoreTriggerState.cs" />
+    <Compile Include="SQL\RetrieveSessionIdentity.cs" />
+    <Compile Include="SQL\SessionID.cs" />
+    <Compile Include="SQL\SetNextKey.cs" />
+    <Compile Include="SQL\SetTriggerState.cs" />
+    <Compile Include="SQL\SQLApplicationEvent.cs" />
+    <Compile Include="SQL\SQLBulkCopy.cs" />
+    <Compile Include="SQL\SQLBulkCopyFactory.cs" />
+    <Compile Include="SQL\SQLBunchedLoadCollection.cs" />
+    <Compile Include="SQL\SQLBunchedRequest.cs" />
+    <Compile Include="SQL\SQLBunchingContext.cs" />
+    <Compile Include="SQL\SQLCollectionLoad.cs" />
+    <Compile Include="SQL\SQLEmail.cs" />
+    <Compile Include="SQL\SQLFileServer.cs" />
+    <Compile Include="SQL\SQLFilter.cs" />
+    <Compile Include="SQL\SQLInvoker.cs" />
+    <Compile Include="SQL\SQLLiteralProvider.cs" />
+    <Compile Include="SQL\SQLCommandProvider.cs" />
+    <Compile Include="SQL\SQLMessageProvider.cs" />
+    <Compile Include="SQL\SQLAddCommandParameterWithValue.cs" />
+    <Compile Include="SQL\RecordBunchFactory.cs" />
+    <Compile Include="SQL\RecordStreamFactory.cs" />
+    <Compile Include="SQL\SQLPagedRecordBunch.cs" />
+    <Compile Include="SQL\SQLCollectionDelete.cs" />
+    <Compile Include="SQL\SQLCollectionDeleteWithMGIntercept.cs" />
+    <Compile Include="SQL\SQLCollectionInsert.cs" />
+    <Compile Include="SQL\SQLCollectionInsertWithMGIntercept.cs" />
+    <Compile Include="SQL\SQLCollectionLoadArbitrary.cs" />
+    <Compile Include="SQL\SQLCollectionLoadBuilder.cs" />
+    <Compile Include="SQL\SQLCollectionLoadBuilderProcess.cs" />
+    <Compile Include="SQL\SQLCollectionLoadNonArbitrary.cs" />
+    <Compile Include="SQL\SQLCollectionLoadProcess.cs" />
+    <Compile Include="SQL\SQLCollectionLoadResponse.cs" />
+    <Compile Include="SQL\SQLCollectionLoadWithMGIntercept.cs" />
+    <Compile Include="SQL\SQLCollectionNonTriggerDelete.cs" />
+    <Compile Include="SQL\SQLCollectionNonTriggerInsert.cs" />
+    <Compile Include="SQL\SQLCollectionNonTriggerUpdate.cs" />
+    <Compile Include="SQL\SQLCollectionUpdate.cs" />
+    <Compile Include="SQL\SQLCollectionUpdateWithMGIntercept.cs" />
+    <Compile Include="SQL\SQLColumnSchema.cs" />
+    <Compile Include="SQL\SQLDbSchema.cs" />
+    <Compile Include="SQL\SQLPagedRecordStream.cs" />
+    <Compile Include="SQL\SQLParameterizedCommand.cs" />
+    <Compile Include="SQL\SQLParameterizedCommandFactory.cs" />
+    <Compile Include="SQL\SQLParameterProvider.cs" />
+    <Compile Include="SQL\SQLProcessVariableProvider.cs" />
+    <Compile Include="SQL\SQLQueryLanguage.cs" />
+    <Compile Include="SQL\SQLQueryLanguageFactory.cs" />
+    <Compile Include="SQL\SQLSetSite.cs" />
+    <Compile Include="SQL\SQLTableSchema.cs" />
+    <Compile Include="SQL\SQLUserPrincipal.cs" />
+    <Compile Include="SQL\StringOf.cs" />
+    <Compile Include="SQL\StringOfCache.cs" />
+    <Compile Include="SQL\TransactionFactory.cs" />
+    <Compile Include="SQL\TransactionScopeBuilder.cs" />
+    <Compile Include="SQL\TransferNotesToSite.cs" />
+    <Compile Include="SQL\UndefineProcessVariable.cs" />
+    <Compile Include="SQL\UndefineVariable.cs" />
+    <Compile Include="SQL\UndefineVariableBySessionId.cs" />
+    <Compile Include="SQL\UserName2.cs" />
+    <Compile Include="SQL\UserNameBySessionId.cs" />
+    <Compile Include="SQL\VariableIsDefined.cs" />
+    <Compile Include="SQL\VariableIsDefinedBySessionId.cs" />
+    <Compile Include="SQL\WBPerGet.cs" />
+    <Compile Include="TagErrorMessage.cs" />
+    <Compile Include="Utilities\CollectionLoadResponseUtil.cs" />
+    <Compile Include="Utilities\ConvertToUtil.cs" />
+    <Compile Include="Utilities\ConvertToUtilFactory.cs" />
+    <Compile Include="Utilities\DataTableUtil.cs" />
+    <Compile Include="Utilities\DataTypeUtil.cs" />
+    <Compile Include="Utilities\DataTypeUtilFactory.cs" />
+    <Compile Include="Utilities\DateTimeUtil.cs" />
+    <Compile Include="Utilities\DateTimeUtilFactory.cs" />
+    <Compile Include="Utilities\DynamicMethodCallUtil.cs" />
+    <Compile Include="Utilities\DynamicMethodCallUtilFactory.cs" />
+    <Compile Include="Utilities\EvaluateDatatypesUtil.cs" />
+    <Compile Include="Utilities\FileNameUtil.cs" />
+    <Compile Include="Utilities\MathUtil.cs" />
+    <Compile Include="Utilities\MathUtilFactory.cs" />
+    <Compile Include="Utilities\SQLValueComparerUtil.cs" />
+    <Compile Include="Utilities\SQLValueComparerUtilFactory.cs" />
+    <Compile Include="Utilities\StreamReaderUtil.cs" />
+    <Compile Include="Utilities\StreamReaderUtilFactory.cs" />
+    <Compile Include="Utilities\StringUtil.cs" />
+    <Compile Include="Utilities\StringWriterFactory.cs" />
+    <Compile Include="Utilities\TupleUtil.cs" />
+    <Compile Include="Utilities\TupleUtilFactory.cs" />
+    <Compile Include="Utilities\UnionUtil.cs" />
+    <Compile Include="Utilities\UnionUtilFactory.cs" />
+    <Compile Include="Utilities\VariableUtil.cs" />
+    <Compile Include="Utilities\VariableUtilFactory.cs" />
+    <Compile Include="Utilities\XmlTextWriterUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Infor.IPF.Metrics" Version="1.1.0-beta1" />
+    <PackageReference Include="Infor.IPF.Metrics.NLogFlatXMLWriter" Version="1.1.0-beta1" />
+    <PackageReference Include="Infor.IPF.TimeProvider" Version="1.0.0-beta1" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="System.Reflection.DispatchProxy" Version="4.6.0-preview6.19303.8" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Data.SQL.UDDT\Data.SQL.UDDT.csproj">
+      <Project>{804042e0-b956-45f7-bf6e-073a5f137bf8}</Project>
+      <Name>Data.SQL.UDDT</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Interfaces\Interfaces.csproj">
+      <Project>{909eeb4a-3bb3-4031-94d8-53b9f99ec342}</Project>
+      <Name>Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logger\Logger.csproj">
+      <Project>{f124e4da-eac3-422a-bdbc-eb5cc72fe2fa}</Project>
+      <Name>Logger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Serializer\Serializer.csproj">
+      <Project>{cdb7970d-2d18-434b-95f1-8d7f8aef75a7}</Project>
+      <Name>Serializer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>IF DEFINED CSI_IDOXCA_CONFIG (
+copy "$(TargetDir)Infor.IPF.Metrics.dll" "$(CSI_IDOXCA_CONFIG)"
+copy "$(TargetDir)Infor.IPF.Metrics.NLogFlatXMLWriter.dll" "$(CSI_IDOXCA_CONFIG)"
+copy "$(TargetDir)Infor.IPF.TimeProvider.dll" "$(CSI_IDOXCA_CONFIG)"
+copy "$(TargetDir)NLog.dll" "$(CSI_IDOXCA_CONFIG)"
+copy "$(TargetDir)System.Reflection.DispatchProxy.dll" "$(CSI_IDOXCA_CONFIG)"
+copy "$(TargetDir)Google.Protobuf.dll" "$(CSI_IDOXCA_CONFIG)"
+copy "$(TargetDir)Grpc.Core.Api.dll" "$(CSI_IDOXCA_CONFIG)"
+copy "$(TargetDir)Grpc.Core.dll" "$(CSI_IDOXCA_CONFIG)"
+copy "$(TargetDir)System.Buffers.dll" "$(CSI_IDOXCA_CONFIG)"
+copy "$(TargetDir)System.Memory.dll" "$(CSI_IDOXCA_CONFIG)"
+copy "$(TargetDir)System.Numerics.Vectors.dll" "$(CSI_IDOXCA_CONFIG)"
+)
+IF DEFINED CSI_IDOXCA_CONFIG copy "$(TargetDir)$(TargetName)$(TargetExt)" "$(CSI_IDOXCA_CONFIG)"
+IF DEFINED CSI_IDOXCA_CONFIG copy "$(TargetDir)$(TargetName).pdb" "$(CSI_IDOXCA_CONFIG)"
+</PostBuildEvent>
+  </PropertyGroup>
+</Project>

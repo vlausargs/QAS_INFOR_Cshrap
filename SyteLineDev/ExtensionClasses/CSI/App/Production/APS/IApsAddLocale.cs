@@ -1,0 +1,16 @@
+//PROJECT NAME: Production
+//CLASS NAME: IApsAddLocale.cs
+
+using System;
+using System.Data;
+using CSI.Data.CRUD;
+using CSI.Data.SQL.UDDT;
+
+namespace CSI.Production.APS
+{
+	public interface IApsAddLocale
+	{
+		int? ApsAddLocaleSp();
+	}
+}
+

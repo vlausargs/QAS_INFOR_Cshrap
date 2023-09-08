@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://infor.com/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://infor.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://infor.com/">
+      <s:element name="GetSLPatchDesc">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sRelease" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAPAR" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="bSaasCap" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSLPatchDescResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSLPatchDescResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSLRecSaasPatches">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sRelease" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSLRecSaasPatchesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSLRecSaasPatchesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSLRecPatches">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sRelease" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSLRecPatchesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSLRecPatchesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSLPatches">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sRelease" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSLPatchesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSLPatchesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetSLPatchDescSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSLPatchDesc" />
+  </wsdl:message>
+  <wsdl:message name="GetSLPatchDescSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSLPatchDescResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSLRecSaasPatchesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSLRecSaasPatches" />
+  </wsdl:message>
+  <wsdl:message name="GetSLRecSaasPatchesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSLRecSaasPatchesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSLRecPatchesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSLRecPatches" />
+  </wsdl:message>
+  <wsdl:message name="GetSLRecPatchesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSLRecPatchesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSLPatchesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSLPatches" />
+  </wsdl:message>
+  <wsdl:message name="GetSLPatchesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSLPatchesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="GetSLPatchDesc">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method gets the SL patch description.</wsdl:documentation>
+      <wsdl:input message="tns:GetSLPatchDescSoapIn" />
+      <wsdl:output message="tns:GetSLPatchDescSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSLRecSaasPatches">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method gets the latest SL SaaS recommended patches.</wsdl:documentation>
+      <wsdl:input message="tns:GetSLRecSaasPatchesSoapIn" />
+      <wsdl:output message="tns:GetSLRecSaasPatchesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSLRecPatches">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method grabs the latest SL recommended patches and then displays them in XML.</wsdl:documentation>
+      <wsdl:input message="tns:GetSLRecPatchesSoapIn" />
+      <wsdl:output message="tns:GetSLRecPatchesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSLPatches">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This method grabs the latest SL patches and then displays them in XML.</wsdl:documentation>
+      <wsdl:input message="tns:GetSLPatchesSoapIn" />
+      <wsdl:output message="tns:GetSLPatchesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSLPatchDesc">
+      <soap:operation soapAction="http://infor.com/GetSLPatchDesc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSLRecSaasPatches">
+      <soap:operation soapAction="http://infor.com/GetSLRecSaasPatches" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSLRecPatches">
+      <soap:operation soapAction="http://infor.com/GetSLRecPatches" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSLPatches">
+      <soap:operation soapAction="http://infor.com/GetSLPatches" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSLPatchDesc">
+      <soap12:operation soapAction="http://infor.com/GetSLPatchDesc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSLRecSaasPatches">
+      <soap12:operation soapAction="http://infor.com/GetSLRecSaasPatches" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSLRecPatches">
+      <soap12:operation soapAction="http://infor.com/GetSLRecPatches" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSLPatches">
+      <soap12:operation soapAction="http://infor.com/GetSLPatches" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://discrete.support.infor.com:81/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://discrete.support.infor.com:81/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

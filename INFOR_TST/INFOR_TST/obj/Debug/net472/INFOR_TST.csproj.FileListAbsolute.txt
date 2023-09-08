@@ -1,0 +1,17 @@
+D:\Programming\C#\INFOR_TST\INFOR_TST\obj\Debug\net472\INFOR_TST.csproj.AssemblyReference.cache
+D:\Programming\C#\INFOR_TST\INFOR_TST\obj\Debug\net472\INFOR_TST.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programming\C#\INFOR_TST\INFOR_TST\obj\Debug\net472\INFOR_TST.AssemblyInfoInputs.cache
+D:\Programming\C#\INFOR_TST\INFOR_TST\obj\Debug\net472\INFOR_TST.AssemblyInfo.cs
+D:\Programming\C#\INFOR_TST\INFOR_TST\obj\Debug\net472\INFOR_TST.csproj.CoreCompileInputs.cache
+D:\Programming\C#\INFOR_TST\INFOR_TST\bin\Debug\net472\ue_INFOR_TST.dll
+D:\Programming\C#\INFOR_TST\INFOR_TST\bin\Debug\net472\ue_INFOR_TST.pdb
+D:\Programming\C#\INFOR_TST\INFOR_TST\bin\Debug\net472\IDOBase.dll
+D:\Programming\C#\INFOR_TST\INFOR_TST\bin\Debug\net472\IDOCore.dll
+D:\Programming\C#\INFOR_TST\INFOR_TST\bin\Debug\net472\IDOProtocol.dll
+D:\Programming\C#\INFOR_TST\INFOR_TST\bin\Debug\net472\MGShared.dll
+D:\Programming\C#\INFOR_TST\INFOR_TST\bin\Debug\net472\WSEnums.dll
+D:\Programming\C#\INFOR_TST\INFOR_TST\bin\Debug\net472\WSFormServerProtocol.dll
+D:\Programming\C#\INFOR_TST\INFOR_TST\bin\Debug\net472\Newtonsoft.Json.dll
+D:\Programming\C#\INFOR_TST\INFOR_TST\obj\Debug\net472\INFOR_TST.csproj.CopyComplete
+D:\Programming\C#\INFOR_TST\INFOR_TST\obj\Debug\net472\ue_INFOR_TST.dll
+D:\Programming\C#\INFOR_TST\INFOR_TST\obj\Debug\net472\ue_INFOR_TST.pdb

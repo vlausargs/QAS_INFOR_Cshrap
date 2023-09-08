@@ -1,0 +1,2 @@
+D:\Programming\C#\SyteLineDev\ExtensionClasses\CSI\Serializer\obj\Debug\Serializer.csproj.AssemblyReference.cache
+D:\Programming\C#\SyteLineDev\ExtensionClasses\CSI\Serializer\obj\Debug\Serializer.csproj.CoreCompileInputs.cache

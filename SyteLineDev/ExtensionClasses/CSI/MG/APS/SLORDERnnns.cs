@@ -1,0 +1,269 @@
+//PROJECT NAME: APSExt
+//CLASS NAME: SLORDERnnns.cs
+
+using CSI.Data.SQL.UDDT;
+using System;
+using System.Data;
+using Mongoose.IDO;
+using Mongoose.IDO.Protocol;
+using CSI.Production.APS;
+using CSI.MG;
+using System.Runtime.InteropServices;
+using CSI.Data.RecordSets;
+using Microsoft.Extensions.DependencyInjection;
+
+namespace CSI.MG.APS
+{
+    [IDOExtensionClass("SLORDERnnns")]
+    public class SLORDERnnns : CSIExtensionClassBase
+    {
+
+		[IDOMethod(MethodFlags.CustomLoad, "Infobar")]
+		public DataTable CLM_ApsGetORDERSp(short? AltNo,
+		                                   [Optional] string FilterString)
+		{
+			using(var MGAppDB = this.CreateAppDB())
+			{
+				var appDb = new CSIAppDBFactory().CreateAppDB(MGAppDB, this.Context, this.GetMessageProvider());
+				var bunchedLoadCollection = new CSIAppDBFactory().CreateLoadCollectionDatabase(MGAppDB, (LoadCollectionDataBase)this.Context.Request);
+				
+				var iCLM_ApsGetORDERExt = new CLM_ApsGetORDERFactory().Create(appDb, bunchedLoadCollection);
+				
+				var result = iCLM_ApsGetORDERExt.CLM_ApsGetORDERSp(AltNo,
+				                                                   FilterString);
+				
+				IRecordCollectionToDataTable recordCollectionToDataTable = new RecordCollectionToDataTable();
+				
+				DataTable dt = recordCollectionToDataTable.ToDataTable(result.Data.Items);
+				return dt;
+			}
+		}
+
+		[IDOMethod(MethodFlags.None, "Infobar")]
+		public int ApsOrderDelSp(Guid? Rowp,
+		string POrd,
+		int? AltNo)
+		{
+			using(var MGAppDB = this.CreateAppDB())
+			{
+				var appDb = new CSIAppDBFactory().CreateAppDB(MGAppDB, this.Context, this.GetMessageProvider());
+				
+				var mgInvoker = new MGInvoker(this.Context);
+				
+				var iApsOrderDelExt = new ApsOrderDelFactory().Create(appDb,
+				mgInvoker,
+				new CSI.Data.SQL.SQLParameterProvider(),
+				true);
+				
+				var result = iApsOrderDelExt.ApsOrderDelSp(Rowp,
+				POrd,
+				AltNo);
+				
+				int Severity = result.Value;
+				return Severity;
+			}
+		}
+
+		[IDOMethod(MethodFlags.None, "Infobar")]
+		public int ApsOrderInsSp(string OrdID,
+		string Descr,
+		string Cust,
+		int? OrdTyp,
+		string MatlID,
+		decimal? OrdSiz,
+		decimal? LodSiz,
+		DateTime? ArivDate,
+		DateTime? DueDate,
+		DateTime? RequDate,
+		int? Cat,
+		string RefOrdID,
+		string Whse,
+		string PlanOnly,
+		string SchedOnly,
+		string AutoPlan,
+		int? OrdFlags,
+		string PartID,
+		DateTime? RelDate,
+		string ProcPlan,
+		int? DerPassMfg,
+		int? DerPassPur,
+		int? DerDNInv,
+		int? DerDNSup,
+		int? DerRep,
+		int? DerCoPr,
+		int? DerDNAScrap,
+		int? DerDNAMin,
+		int? DerPullUp,
+		int? DerRestr,
+		int? DerStop,
+		int? DerCross,
+		int? DerFixSup,
+		int? DerFixDem,
+		int? AltNo,
+		string OrderTable,
+		Guid? RowPointer)
+		{
+			using(var MGAppDB = this.CreateAppDB())
+			{
+				var appDb = new CSIAppDBFactory().CreateAppDB(MGAppDB, this.Context, this.GetMessageProvider());
+				
+				var mgInvoker = new MGInvoker(this.Context);
+				
+				var iApsOrderInsExt = new ApsOrderInsFactory().Create(appDb,
+				mgInvoker,
+				new CSI.Data.SQL.SQLParameterProvider(),
+				true);
+				
+				var result = iApsOrderInsExt.ApsOrderInsSp(OrdID,
+				Descr,
+				Cust,
+				OrdTyp,
+				MatlID,
+				OrdSiz,
+				LodSiz,
+				ArivDate,
+				DueDate,
+				RequDate,
+				Cat,
+				RefOrdID,
+				Whse,
+				PlanOnly,
+				SchedOnly,
+				AutoPlan,
+				OrdFlags,
+				PartID,
+				RelDate,
+				ProcPlan,
+				DerPassMfg,
+				DerPassPur,
+				DerDNInv,
+				DerDNSup,
+				DerRep,
+				DerCoPr,
+				DerDNAScrap,
+				DerDNAMin,
+				DerPullUp,
+				DerRestr,
+				DerStop,
+				DerCross,
+				DerFixSup,
+				DerFixDem,
+				AltNo,
+				OrderTable,
+				RowPointer);
+				
+				int Severity = result.Value;
+				return Severity;
+			}
+		}
+
+		[IDOMethod(MethodFlags.None, "Infobar")]
+		public int ApsOrderUpdSp(string OrdID,
+		string Descr,
+		string Cust,
+		int? OrdTyp,
+		string MatlID,
+		decimal? OrdSiz,
+		DateTime? ArivDate,
+		DateTime? DueDate,
+		DateTime? RequDate,
+		int? Cat,
+		string RefOrdID,
+		string Whse,
+		string PlanOnly,
+		string SchedOnly,
+		string AutoPlan,
+		int? OrdFlags,
+		string PartID,
+		DateTime? RelDate,
+		string ProcPlan,
+		int? DerPassMfg,
+		int? DerPassPur,
+		int? DerDNInv,
+		int? DerDNSup,
+		int? DerRep,
+		int? DerCoPr,
+		int? DerDNAScrap,
+		int? DerDNAMin,
+		int? DerPullUp,
+		int? DerRestr,
+		int? DerStop,
+		int? DerCross,
+		int? DerFixSup,
+		int? DerFixDem,
+		Guid? RowP,
+		int? AltNo,
+		string OrderTable)
+		{
+			using(var MGAppDB = this.CreateAppDB())
+			{
+				var appDb = new CSIAppDBFactory().CreateAppDB(MGAppDB, this.Context, this.GetMessageProvider());
+				
+				var mgInvoker = new MGInvoker(this.Context);
+				
+				var iApsOrderUpdExt = new ApsOrderUpdFactory().Create(appDb,
+				mgInvoker,
+				new CSI.Data.SQL.SQLParameterProvider(),
+				true);
+				
+				var result = iApsOrderUpdExt.ApsOrderUpdSp(OrdID,
+				Descr,
+				Cust,
+				OrdTyp,
+				MatlID,
+				OrdSiz,
+				ArivDate,
+				DueDate,
+				RequDate,
+				Cat,
+				RefOrdID,
+				Whse,
+				PlanOnly,
+				SchedOnly,
+				AutoPlan,
+				OrdFlags,
+				PartID,
+				RelDate,
+				ProcPlan,
+				DerPassMfg,
+				DerPassPur,
+				DerDNInv,
+				DerDNSup,
+				DerRep,
+				DerCoPr,
+				DerDNAScrap,
+				DerDNAMin,
+				DerPullUp,
+				DerRestr,
+				DerStop,
+				DerCross,
+				DerFixSup,
+				DerFixDem,
+				RowP,
+				AltNo,
+				OrderTable);
+				
+				int Severity = result.Value;
+				return Severity;
+			}
+		}
+
+		[IDOMethod(MethodFlags.CustomLoad, "Infobar")]
+		public DataTable CLM_ApsWhatIfEXRCPTDemandSp(int? AltNo,
+			[Optional] string OrderIdFilter)
+		{
+			var iCLM_ApsWhatIfEXRCPTDemandExt = this.GetService<ICLM_ApsWhatIfEXRCPTDemand>();
+			
+			var result = iCLM_ApsWhatIfEXRCPTDemandExt.CLM_ApsWhatIfEXRCPTDemandSp(AltNo,
+				OrderIdFilter);
+			
+			if (result.Data is null)
+				return new DataTable();
+			else
+			{
+				IRecordCollectionToDataTable recordCollectionToDataTable = new RecordCollectionToDataTable();
+				return recordCollectionToDataTable.ToDataTable(result.Data.Items);
+			}
+		}
+    }
+}

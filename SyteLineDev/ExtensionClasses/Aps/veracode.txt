@@ -1,0 +1,10 @@
+CWE-327: Use of a Broken or Risky Cryptographic Algorithm
+    File: SLApsSites.vb
+    Summary: A new cryptographic algorithm will be used going forward.  However, the old algorithm w
+        in the code, in order to be able to provide an easy, hands-free, automatic update for custom
+        values will be automatically updated to the new algorithm as they are encountered.
+    Details: The problem is caused by the use of PaddingMode Zeros.  We are now going to use Padding
+        A prefix will be added to encrypted strings, to identify the padding mode being used, so tha
+        which mode to use.  To update existing installations, when an encrypted value does not have
+        it will be decrypted, encrypted using the new padding mode with a prefix added, and then rep
+~

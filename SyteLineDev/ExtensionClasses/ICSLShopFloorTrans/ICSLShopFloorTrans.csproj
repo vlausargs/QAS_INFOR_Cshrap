@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{981FBB3B-26F5-4F88-BBF2-D710B799364D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ICSLShopFloorTrans</RootNamespace>
+    <AssemblyName>ICSLShopFloorTransAsm</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IDOBase">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Mongoose.submod\Setup\WinStudio\IDOBase.dll</HintPath>
+    </Reference>
+    <Reference Include="IDOCore">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Mongoose.submod\Setup\WinStudio\IDOCore.dll</HintPath>
+    </Reference>
+    <Reference Include="IDOProtocol">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Mongoose.submod\Setup\WinStudio\IDOProtocol.dll</HintPath>
+    </Reference>
+    <Reference Include="MGShared">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Mongoose.submod\Setup\WinStudio\MGShared.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CombineLaborAndQty.cs" />
+    <Compile Include="ContainerFunctions.cs" />
+    <Compile Include="Field.cs" />
+    <Compile Include="ICSLShopFloorTrans.cs" />
+    <Compile Include="JobMaterialRapidEntryUpdate.cs" />
+    <Compile Include="JobMoveUpdate.cs" />
+    <Compile Include="Labor\ALaborUtils.cs" />
+    <Compile Include="Labor\AttendanceDispatcher.cs" />
+    <Compile Include="Labor\AttendanceUpdateDaoImpl.cs" />
+    <Compile Include="Labor\DispatcherService.cs" />
+    <Compile Include="Labor\InputDataSet.cs" />
+    <Compile Include="Labor\TASLProjectLaborDispatcher.cs" />
+    <Compile Include="Labor\TASLSROLaborDispatcher.cs" />
+    <Compile Include="Labor\TASLJobDispatcher.cs" />
+    <Compile Include="Labor\JobDispatcher.cs" />
+    <Compile Include="Labor\JobLaborDaoImpl.cs" />
+    <Compile Include="Labor\LaborUpdateJobCompleteOpeStatus.cs" />
+    <Compile Include="Labor\FTLaborUpload.cs" />
+    <Compile Include="Labor\TASLLaborUpload.cs" />
+    <Compile Include="Labor\LaborUpload.cs" />
+    <Compile Include="Labor\ParseUploadRequest.cs" />
+    <Compile Include="Labor\ProjectLaborDispatcher.cs" />
+    <Compile Include="Labor\ProjectLaborUpdateDaoImpl.cs" />
+    <Compile Include="Labor\SROLaborDispatcher.cs" />
+    <Compile Include="ProjectLaborUpdate.cs" />
+    <Compile Include="ProjectMaterialIssueUpdate.cs" />
+    <Compile Include="PSUpdate.cs" />
+    <Compile Include="PSScrapUpdate.cs" />
+    <Compile Include="MoveUpdate.cs" />
+    <Compile Include="JITProductionUpdate.cs" />
+    <Compile Include="ReportProductionUpdate.cs" />
+    <Compile Include="Request.cs" />
+    <Compile Include="RequestParser.cs" />
+    <Compile Include="ShopFloorUtilities.cs" />
+    <Compile Include="SROLaborUpdate.cs" />
+    <Compile Include="TASLJobUpload.cs" />
+    <Compile Include="WorkCenterLaborUpdate.cs" />
+    <Compile Include="WorkCenterMachineUpdate.cs" />
+    <Compile Include="WorkCenterMaterialIssueUpdate.cs" />
+    <Compile Include="JobMaterialIssueUpdate.cs" />
+    <Compile Include="ShopFloorTransactions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CSI\App\App.csproj">
+      <Project>{43f6b447-40b7-4550-a881-c7e6db3a79bf}</Project>
+      <Name>App</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CSI\Interfaces\Interfaces.csproj">
+      <Project>{909EEB4A-3BB3-4031-94D8-53B9F99EC342}</Project>
+      <Name>Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CSI\MG\MG.csproj">
+      <Project>{5EE3D1ED-BA1E-4ADE-80EB-250DCC2C3DF1}</Project>
+      <Name>MG</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ICSLBase\ICSLBase.csproj">
+      <Project>{611c6fcb-240c-487c-968c-20acbb8f252a}</Project>
+      <Name>ICSLBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ICSLCommonLibrary\ICSLCommonLibrary.csproj">
+      <Project>{b648fae8-f148-41a1-a674-e319655ecb3d}</Project>
+      <Name>ICSLCommonLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>IF DEFINED CSI_IDOXCA_CONFIG copy /Y "$(TargetDir)$(TargetName)$(TargetExt)" "$(CSI_IDOXCA_CONFIG)"
+IF DEFINED CSI_IDOXCA_CONFIG copy /Y "$(TargetDir)$(TargetName).pdb" "$(CSI_IDOXCA_CONFIG)"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

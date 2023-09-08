@@ -1,0 +1,86 @@
+//PROJECT NAME: Production
+//CLASS NAME: IPP_SavePrintingJobRouteData.cs
+
+using System;
+using System.Data;
+using CSI.Data.CRUD;
+using CSI.Data.SQL.UDDT;
+
+namespace CSI.Production
+{
+	public interface IPP_SavePrintingJobRouteData
+	{
+		(int? ReturnCode, string Infobar) PP_SavePrintingJobRouteDataSp(string Job,
+		int? Suffix,
+		int? OperNum,
+		string JobType,
+		string OperationType,
+		string OperationTypeCode,
+		decimal? CartonLength = 0,
+		decimal? CartonWidth = 0,
+		decimal? length = 0,
+		int? NumOfHoles = 0,
+		int? ColorsFront_C = 0,
+		int? ColorsFront_M = 0,
+		int? ColorsFront_Y = 0,
+		int? ColorsFront_K = 0,
+		int? ColorsBack_C = 0,
+		int? ColorsBack_M = 0,
+		int? ColorsBack_Y = 0,
+		int? ColorsBack_K = 0,
+		int? Out = 0,
+		int? NumOfWords = 0,
+		decimal? SheetCount = 0,
+		int? Up = 0,
+		int? NumOfSpclColors = 0,
+		decimal? Width = 0,
+		decimal? OperDifficultFactor = 0,
+		int? NumOfManualHandleSteps = 0,
+		int? NumOfSidesToPrint = 0,
+		int? NumberOfAddlColors = 0,
+		decimal? JobQtyPerSheet = 0,
+		decimal? PaperConsumptionQty = 0,
+		decimal? OperRating1 = 0,
+		decimal? OperRating2 = 0,
+		decimal? OperRating3 = 0,
+		decimal? OperRating4 = 0,
+		decimal? OperRating5 = 0,
+		decimal? OperRating6 = 0,
+		decimal? OperRating7 = 0,
+		decimal? OperRating8 = 0,
+		decimal? OperRating9 = 0,
+		decimal? OperRating10 = 0,
+		decimal? OperRating11 = 0,
+		decimal? OperRating12 = 0,
+		decimal? OperRating13 = 0,
+		decimal? OperRating14 = 0,
+		decimal? OperRating15 = 0,
+		decimal? OperRating16 = 0,
+		decimal? OperRating17 = 0,
+		decimal? OperRating18 = 0,
+		decimal? OperRating19 = 0,
+		decimal? OperRating20 = 0,
+		int? SetupRunFinishSelected1 = 0,
+		int? SetupRunFinishSelected2 = 0,
+		int? SetupRunFinishSelected3 = 0,
+		int? SetupRunFinishSelected4 = 0,
+		int? SetupRunFinishSelected5 = 0,
+		int? SetupRunFinishSelected6 = 0,
+		int? SetupRunFinishSelected7 = 0,
+		int? SetupRunFinishSelected8 = 0,
+		int? SetupRunFinishSelected9 = 0,
+		int? SetupRunFinishSelected10 = 0,
+		int? SetupRunFinishSelected11 = 0,
+		int? SetupRunFinishSelected12 = 0,
+		int? SetupRunFinishSelected13 = 0,
+		int? SetupRunFinishSelected14 = 0,
+		int? SetupRunFinishSelected15 = 0,
+		int? SetupRunFinishSelected16 = 0,
+		int? SetupRunFinishSelected17 = 0,
+		int? SetupRunFinishSelected18 = 0,
+		int? SetupRunFinishSelected19 = 0,
+		int? SetupRunFinishSelected20 = 0,
+		string Infobar = null);
+	}
+}
+
